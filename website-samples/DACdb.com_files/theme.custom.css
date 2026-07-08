@@ -1,0 +1,89 @@
+/***********************************************************
+  Custom TableSort Theme (by thezoggy) Modified by MRL
+ **********************************************************/
+
+/* Zebra stripping - Disabled to allow for grey and yellow rows for term members, cancelled members, etc.
+ * Use:
+ * 	$("tbody > tr.odd").each(function()  { 
+ *		var color = $(this).css("background-color"); 
+ *		if ( color == "transparent" ) { 
+ *			$(this).addClass( "stripe" );
+ *		}		
+ *	});
+
+*/
+
+.tablesorter-custom tbody tr.even td {
+	background: red;
+}
+.tablesorter-custom tbody tr.odd td {
+	background: yellow;
+}
+
+/* hovered row colors */
+.tablesorter-custom tbody > tr:hover > td,
+.tablesorter-custom tbody > tr.even:hover > td,
+.tablesorter-custom tbody > tr.odd:hover > td {  
+	background: #ececec;
+}
+
+/* overall */
+.tablesorter-custom {
+	/* width: 100%; */
+	font-family:Tahoma, Geneva, sans-serif;
+	text-align: left;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0;
+	/*
+	font: 11px/18px Arial, Sans-serif;
+	text-align: left;
+	/* background-color: #ffffff; */
+}
+
+/* header */
+.tablesorter-custom th,
+.tablesorter-custom thead td  {
+	padding: 1px;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
+	/* border: 1px solid gainsboro;  */
+}
+
+.tablesorter-custom .header,
+.tablesorter-custom .tablesorter-header {
+	padding: 5px 3px 5px 3px;
+	cursor: pointer;
+	background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAAP///////yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+	background-position: center right;
+	background-repeat: no-repeat;
+	
+	display: table-cell !important;
+	vertical-align: middle !important;
+	background-position: right center !important;
+	padding-right: 15px;
+}
+
+.tablesorter-custom .headerSortUp,
+.tablesorter-custom .tablesorter-headerSortUp,
+.tablesorter-custom .tablesorter-headerAsc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAAP///////yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+}
+.tablesorter-custom .headerSortDown,
+.tablesorter-custom .tablesorter-headerSortDown,
+.tablesorter-custom .tablesorter-headerDesc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAAP///////yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+}
+.tablesorter-custom thead .sorter-false {
+	background-image: none;
+	padding: 0px;
+}
+
+/* table processing indicator */
+.tablesorter-custom .tablesorter-processing {
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
+	/* background-image: url(../addons/pager/icons/loading.gif) !important; */
+	background-image: url('data:image/gif;base64,R0lGODlhFAAUAKEAAO7u7lpaWgAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQBCgACACwAAAAAFAAUAAACQZRvoIDtu1wLQUAlqKTVxqwhXIiBnDg6Y4eyx4lKW5XK7wrLeK3vbq8J2W4T4e1nMhpWrZCTt3xKZ8kgsggdJmUFACH5BAEKAAIALAcAAAALAAcAAAIUVB6ii7jajgCAuUmtovxtXnmdUAAAIfkEAQoAAgAsDQACAAcACwAAAhRUIpmHy/3gUVQAQO9NetuugCFWAAAh+QQBCgACACwNAAcABwALAAACE5QVcZjKbVo6ck2AF95m5/6BSwEAIfkEAQoAAgAsBwANAAsABwAAAhOUH3kr6QaAcSrGWe1VQl+mMUIBACH5BAEKAAIALAIADQALAAcAAAIUlICmh7ncTAgqijkruDiv7n2YUAAAIfkEAQoAAgAsAAAHAAcACwAAAhQUIGmHyedehIoqFXLKfPOAaZdWAAAh+QQFCgACACwAAAIABwALAAACFJQFcJiXb15zLYRl7cla8OtlGGgUADs=') !important;
+}
+
+

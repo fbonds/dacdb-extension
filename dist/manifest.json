@@ -5,6 +5,10 @@
   "description": "Export any table on DACdb to CSV",
   "permissions": [],
   "host_permissions": ["https://*.dacdb.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon-48.png"
+  },
   "content_scripts": [
     {
       "matches": ["https://*.dacdb.com/*"],

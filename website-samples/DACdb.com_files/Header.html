@@ -1,0 +1,2369 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://www.dacdb.com/Header.cfm?fw=Home& -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Menu</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<meta name="robots" content="noindex">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="expires" content="0">
+		<meta http-equiv="pragma" content="no-cache">
+
+		<link type="text/css" rel="stylesheet" href="./header2.css">
+		<link type="text/css" rel="stylesheet" href="./slickModal.min.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="./sweetalert2.css">
+
+		<style type="text/css">
+
+			
+			.TDInfo {font-family:Tahoma, Geneva, sans-serif; font-size:13px; padding:5px;}
+			.TDLabel {font-size:13px; background-color:ghostwhite; font-family:Tahoma, Geneva, sans-serif; padding:5px; border-bottom:1px solid gainsboro; text-align:right;}
+			.TDLabelC {font-size:13px; background-color:ghostwhite; font-family:Tahoma, Geneva, sans-serif; padding:5px; border-bottom:1px solid gainsboro; text-align:center;}
+			.TDLabelR {font-size:13px; background-color:ghostwhite; font-family:Tahoma, Geneva, sans-serif; padding:5px; border-bottom:1px solid gainsboro; text-align:right;}
+			.TDGreyR {font-size:13px; color:#333333; background-color:ghostwhite; font-family:Tahoma, Geneva, sans-serif; padding:5px; border-bottom:1px solid gainsboro;vertical-align:top; text-align:right;}
+			.TDData   {font-size: 12px; text-align: left; font-family: Tahoma, Geneva, sans-serif;  padding-left: 3px;}
+			.TDDataC  {font-size: 12px; text-align: center; font-family: Tahoma, Geneva, sans-serif; }
+			.TDDataR  {font-size: 12px; text-align: right; font-family: Tahoma, Geneva, sans-serif; padding-right: 3px;}
+			.Require {color:red;}
+
+			.TxtIn    {text-align: left; font-size: 12px; vertical-align: middle; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; }		/* Text Entry Styles */
+			.TxtInB   {text-align: left; font-size: 12px; vertical-align: middle; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: bold;}
+			.TxtInC   {text-align: center; font-size: 12px; vertical-align: middle; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; }
+			.TxtInCB  {text-align: center; font-size: 12px; vertical-align: middle; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: bold;}
+			.TxtInR   {text-align: right; font-size: 12px; vertical-align: middle; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; }
+			.TxtInRB   {text-align: right; font-size: 12px; vertical-align: middle; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: bold;}
+			.TxtInBlueB {text-align: left; font-size: 12px; vertical-align: middle; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: bold; color: Blue}
+			.TxtInBlueBC {text-align: left; font-size: 12px; vertical-align: middle; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: bold; color: Blue}
+			.TxtInBlueBR {text-align: right; font-size: 12px; vertical-align: middle; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: bold; color: Blue}
+			
+
+			.slickModal .close.text {
+			    height: 20px;
+			    width: 43px;
+			    right: 5px;
+			    top: 5px;
+			    background: #8D0E3A;
+			    padding: 5px;
+			    opacity: .7;
+			    border-radius: 10%;
+			}
+
+			.user-image {
+	    		border-radius: 50%;
+				max-height: 28px;
+				max-width: 28px;
+				margin-right: 7px;
+			}
+
+			.nav-tabs > li
+			{
+				border-radius: 6px;
+   				margin-right: 10px !important;
+				outline: 2px;
+				outline-style: outset;
+			}
+
+			.nav-tabs > li > a:hover {
+				color: #23415e !important;
+				background-color: ghostwhite !important;
+				border-color: transparent !important; /* Removes border color */
+				border-radius: 6px !important;
+			}
+
+			.nav-tabs > li.active > a,
+			.nav-tabs > li.active > a:focus{
+				color: #23415e !important;
+		    		background-color: white !important;
+				border-color: transparent !important; /* Removes border color */
+				border-radius: 6px !important;
+			}
+
+			.navbar-default .navbar-toggle {
+			  margin-top: 2px;
+			  padding: -25px -25px;
+			  border-color: transparent; /* Removes border color */
+			  float: none; /* Move navbar toggle to left */
+			}
+
+			.navbar-default .navbar-toggle:hover,
+			.navbar-default .navbar-toggle:focus {
+			  background-color: transparent !important; /* Changes toggle color on hover */
+			}
+			
+			.navbar-default .navbar-toggle .icon-bar {
+			  background-color: white !important; /* Changes regular toggle color */
+			}
+
+			.sweet-alert {
+				z-index: 200000 !important;
+			}
+
+			.sweet-overlay {
+				z-index: 100000 !important;
+			}			
+
+			.lead {
+				font-weight: 500 !important;
+			}
+
+			/* The main container for the switch */
+			.toggle-switch {
+			position: relative;
+			display: inline-block;
+			width: 100px; /* Adjust width/height as needed */
+			height: 24px;
+			}
+
+			/* Hide the default HTML checkbox */
+			.toggle-switch input {
+			opacity: 0;
+			width: 0;
+			height: 0;
+			}
+
+			/* The slider track (the background) */
+			.slider {
+			position: absolute;
+			cursor: pointer;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: white; /* Off state color */
+			transition: 0.4s; /* Smooth transition for color */
+			border-radius: 34px; /* Makes the track rounded */
+			}
+
+			/* The slider knob (the circle) */
+			.slider::before {
+			position: absolute;
+			content: "";
+			height: 16px; /* Adjust size relative to height of .toggle-switch */
+			width: 46px; /* Adjust size relative to height of .toggle-switch */
+			left: 4px; /* Positioning from the left */
+			bottom: 4px; /* Positioning from the bottom */
+			background-color: #12284b; /* Knob color */
+			transition: 0.4s; /* Smooth transition for movement */
+			border-radius: 15px; /* Makes the knob circular */
+			}
+
+			/* When the checkbox is checked, change the background color of the slider track */
+			input:checked + .slider {
+			background-color: white; /* On state color */
+			}
+
+			/* When the checkbox is checked, move the knob to the right */
+			input:checked + .slider::before {
+			transform: translateX(46px); /* Moves the knob across the track */
+			}
+
+			@media (max-width: 1200px) {
+				/*Removes Account and/or Club Names on screen shrink*/
+				.disappear {
+				visibility: collapse;
+				width: 0px;
+				height: 0px;
+				}
+			}
+
+			@media (max-width: 1140px) {
+				/*Remove shortcuts overlay at this size*/
+				#shortcuts {
+				display: none !important;
+				}
+			}
+
+			@media (max-width: 1025px) {
+				#nav{
+			    padding-right: 50px !important;
+				}
+			}
+
+			@media (max-width: 975px) {
+				/*Keeps user login at the right on screen shrink*/
+				#navgroup {
+				position:fixed !important;
+				right:-1px !important;
+				top:-1px !important;
+				}
+				#notificationwrap {
+				right:133px !important;
+				}
+				#nav{
+			    padding-right: 30px !important;
+				}
+			}
+
+			@media screen and (max-width: 767px) {
+				#notifytable {
+				overflow-y:auto;
+				overflow-x:hidden;
+				}
+				#notifytext {
+				white-space: normal;
+				}
+				#notifydesc {
+				white-space: normal;
+				}
+				#notificationwrap {
+				right:64px !important;
+				}
+				#cartwrap {
+				left:0px !important;
+				}
+				#nav{
+			    padding-right: 20px !important;
+				}
+				#lvl9T, #lvl9B {
+				display: none !important;
+				}
+
+			}
+
+			/*@media (max-width: 768px) {
+				#shortcuts2 {
+				display: none !important;
+				}
+			}*/
+
+			@media (max-width: 435px) {
+				#notifytable {
+				overflow-x:auto;
+				}
+				/*#shortcuts2 {
+				display: inline !important;
+				}*/
+			}
+
+			@media print {
+			.noprint { display: none; }
+			}
+
+		</style>
+		<!-- Bootstrap 3.4.1 --> 
+		
+		<link rel="stylesheet" href="./bootstrap.css">
+
+		<!-- jQuery UI 1.12.1  -->
+		<link rel="Stylesheet" type="text/css" href="./jquery-ui.css">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="./all.css">
+		<!-- Theme style -->
+		<link rel="stylesheet" href="./AdminLTE.css">
+	    <link rel="stylesheet" href="./_all-skins.css">
+
+
+	<style></style></head>
+
+	<body class="layout-top-nav skin-blue-light" id="header-body" style="margin: 0;" marginwidth="0" marginheight="0" data-new-gr-c-s-check-loaded="14.1309.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1309.0">
+		
+		<div id="usermenu" class="noprint" style="background-color:#23415e;position: absolute;z-index:1999;width:230px;margin:auto;right: 0;top:68px;display:none;padding:6px;min-height:100px;">
+			<div id="#SESSION.RoleID#" class="container-fluid text-center sessionroleid" style="background-color:ghostwhite; padding: 5px;">
+		        <!-- User image -->
+	 			
+							<img border="0" width="90" src="./M801499891.jpg" class="img-circle" alt="User Image">
+						
+					<p>
+						
+							</p><div style="align:center;">
+								<font class="Welcome">Welcome:</font> <br> Bonds, Fletcher<br>
+								<a href="https://www.dacdb.com/Member2/MemberAdmin.cfm?Action=E&amp;UserID=801499891" target="main" class="Menulink">Edit My Profile</a><br>
+								
+										(4)
+									
+							</div>
+						
+					<p></p>
+					<!-- User Menu info/logout Content -->
+					
+								| <a href="https://www.dacdb.com/util/Identity.cfm" target="main" class="Menulink">ID</a> <br>
+							
+	            <div class="text-center">
+	            	<br>
+				   	<a href="https://www.dacdb.com/Logout.cfm" target="main" class="btn btn-default btn-flat">Logout</a>
+	            </div>
+	        </div> <!-- /.container-fluid -->
+		</div> 
+
+		
+		<div id="shortcuts" style="position: absolute; background-color: ghostwhite; border-right: 1px solid gainsboro; border-bottom: 1px solid gainsboro; z-index: 1999; width: 85px; top: 68px; height: 100%; display: none;">
+	           	<div id="DataContent">
+            <li class="subheader" id="clubshortlabel" style="background-color:#1e3c5b;color:white;font-weight:400;font-size:14px;font-family:Tahoma, Geneva, sans-serif;list-style-type:none;">My Club Favorites</li>
+            <div class="container-fluid" id="clubcontain" style="background-color:ghostwhite;padding-left:4px;padding-right:0px;height:auto;width:inherit;">
+                <div id="innerclub" style="margin-bottom: 3px; margin-top: 3px; list-style-type:none; padding: 0px !important; display: inline-flex !important; flex-wrap:wrap;">
+                    
+                        <li id="Q_1" style="padding: 1px !important;">
+                            
+                                <a href="https://www.dacdb.com/FindMember/Index.cfm" style="padding: 1px 1px;" target="main" title="Find Member">
+                            
+                                <img class="ShortImage" style="height:28px;width:28px;" src="./Find0.jpg">
+                            </a>
+                        </li>
+                    
+                        <li id="Q_2" style="padding: 1px !important;">
+                            
+                                <a href="https://www.dacdb.com/Engagement/Subscribe.cfm" style="padding: 1px 1px;" target="main" title="Engagement">
+                            
+                                <img class="ShortImage" style="height:28px;width:28px;" src="./Engagement0.jpg">
+                            </a>
+                        </li>
+                    
+                        <li id="Q_3" style="padding: 1px !important;">
+                            
+                                <a href="https://www.dacdb.com/Website2/index.cfm" style="padding: 1px 1px;" target="main" title="Websites">
+                            
+                                <img class="ShortImage" style="height:28px;width:28px;" src="./Websites0.jpg">
+                            </a>
+                        </li>
+                    
+                </div>
+            </div>
+        
+    
+    <li class="subheader" id="distshortlabel" style="background-color:#1e3c5b;color:white;font-weight:400;font-size:14px;font-family:Tahoma, Geneva, sans-serif;list-style-type:none;">My District Favorites</li>
+    <div class="container-fluid" id="distcontain" style="background-color:ghostwhite;border-bottom: 1px solid gainsboro;padding-left:4px;padding-right:0px;height:auto;">
+        <div id="innerdist" style="margin-bottom: 3px; margin-top: 3px; list-style-type:none; padding: 0px !important; display: inline-flex !important; flex-wrap:wrap;">
+            
+                    <li id="Q_Calendar" style="padding: 1px !important;">
+                        	<a href="https://www.dacdb.com/Calendar/Index.cfm?ClubID=0" style="padding: 1px 1px;" target="main" title="Calendar &amp; Events">       <img class="ShortImage" style="height:28px;width:28px;" src="./Calendar0.jpg"></a>
+                    </li>
+                
+                    <li id="Q_FindMember" style="padding: 1px !important;">
+                        <a href="https://www.dacdb.com/FindMember/Index.cfm" style="padding: 1px 1px;" target="main" title="Find">				                <img class="ShortImage" style="height:28px;width:28px;" src="./Find0.jpg"></a>
+                    </li>
+                
+                    <li id="Q_Clubs" style="padding: 1px !important;">
+                        		<a href="https://www.dacdb.com/Clubs/Index.cfm" style="padding: 1px 1px;" target="main" title="Clubs">	            <img class="ShortImage" style="height:28px;width:28px;" src="./Clubs0.jpg"></a>
+                    </li>
+                
+                    <li id="Q_AccountNews" style="padding: 1px !important;">
+                        <a href="https://www.dacdb.com/Files/Index.cfm?Type=Newsletter&amp;ClubID=0" style="padding: 1px 1px;" target="main" title="Newsletters">    <img class="ShortImage" style="height:28px;width:28px;" src="./News0.jpg"></a>
+                    </li>
+                
+                    <li id="Q_EZGiving" style="padding: 1px !important;">
+                        	<a href="https://www.dacdb.com/Donors/Subscribe.cfm?ClubID=0" style="padding: 1px 1px;" target="main" title="EZ Giving">			        <img class="ShortImage" style="height:28px;width:28px;" src="./EzGiving0.jpg"></a>
+                    </li>
+                
+                    <li id="Q_Committees" style="padding: 1px !important;">
+                        	<a href="https://www.dacdb.com/Committees/Index.cfm?ClubID=0" style="padding: 1px 1px;" target="main" title="Committees">			    <img class="ShortImage" style="height:28px;width:28px;" src="./Committees0.jpg"></a>
+                    </li>
+                
+        </div>
+    </div>
+</div>
+		</div>
+
+		
+		<div style="display:none;">
+			<div id="shortcuts2" style="background-color: ghostwhite;border-right: 1px solid gainsboro;border-bottom: 1px solid gainsboro;width:201px">
+	           	<div id="DataContent2">
+            <li class="subheader" id="clubshortlabel" style="background-color:#1e3c5b;color:white;font-weight:400;font-size:14px;font-family:Tahoma, Geneva, sans-serif;list-style-type:none;">My Club Favorites</li>
+            <div class="container-fluid" id="clubcontain" style="background-color:ghostwhite;padding-left:4px;padding-right:0px;height:auto;width:inherit;">
+                <div id="innerclub" style="margin-bottom: 3px; margin-top: 3px; list-style-type:none; padding: 0px !important; display: inline-flex !important; flex-wrap:wrap;">
+                    
+                        <li id="Q_1" style="padding: 1px !important;">
+                            
+                                <a href="https://www.dacdb.com/FindMember/Index.cfm" style="padding: 1px 1px;" target="main" title="Find Member">
+                            
+                                <img class="ShortImage" style="height:28px;width:28px;" src="./Find0.jpg">
+                            </a>
+                        </li>
+                    
+                        <li id="Q_2" style="padding: 1px !important;">
+                            
+                                <a href="https://www.dacdb.com/Engagement/Subscribe.cfm" style="padding: 1px 1px;" target="main" title="Engagement">
+                            
+                                <img class="ShortImage" style="height:28px;width:28px;" src="./Engagement0.jpg">
+                            </a>
+                        </li>
+                    
+                        <li id="Q_3" style="padding: 1px !important;">
+                            
+                                <a href="https://www.dacdb.com/Website2/index.cfm" style="padding: 1px 1px;" target="main" title="Websites">
+                            
+                                <img class="ShortImage" style="height:28px;width:28px;" src="./Websites0.jpg">
+                            </a>
+                        </li>
+                    
+                </div>
+            </div>
+        
+    
+    <li class="subheader" id="distshortlabel" style="background-color:#1e3c5b;color:white;font-weight:400;font-size:14px;font-family:Tahoma, Geneva, sans-serif;list-style-type:none;">My District Favorites</li>
+    <div class="container-fluid" id="distcontain" style="background-color:ghostwhite;border-bottom: 1px solid gainsboro;padding-left:4px;padding-right:0px;height:auto;">
+        <div id="innerdist" style="margin-bottom: 3px; margin-top: 3px; list-style-type:none; padding: 0px !important; display: inline-flex !important; flex-wrap:wrap;">
+            
+                    <li id="Q_Calendar" style="padding: 1px !important;">
+                        	<a href="https://www.dacdb.com/Calendar/Index.cfm?ClubID=0" style="padding: 1px 1px;" target="main" title="Calendar &amp; Events">       <img class="ShortImage" style="height:28px;width:28px;" src="./Calendar0.jpg"></a>
+                    </li>
+                
+                    <li id="Q_FindMember" style="padding: 1px !important;">
+                        <a href="https://www.dacdb.com/FindMember/Index.cfm" style="padding: 1px 1px;" target="main" title="Find">				                <img class="ShortImage" style="height:28px;width:28px;" src="./Find0.jpg"></a>
+                    </li>
+                
+                    <li id="Q_Clubs" style="padding: 1px !important;">
+                        		<a href="https://www.dacdb.com/Clubs/Index.cfm" style="padding: 1px 1px;" target="main" title="Clubs">	            <img class="ShortImage" style="height:28px;width:28px;" src="./Clubs0.jpg"></a>
+                    </li>
+                
+                    <li id="Q_AccountNews" style="padding: 1px !important;">
+                        <a href="https://www.dacdb.com/Files/Index.cfm?Type=Newsletter&amp;ClubID=0" style="padding: 1px 1px;" target="main" title="Newsletters">    <img class="ShortImage" style="height:28px;width:28px;" src="./News0.jpg"></a>
+                    </li>
+                
+                    <li id="Q_EZGiving" style="padding: 1px !important;">
+                        	<a href="https://www.dacdb.com/Donors/Subscribe.cfm?ClubID=0" style="padding: 1px 1px;" target="main" title="EZ Giving">			        <img class="ShortImage" style="height:28px;width:28px;" src="./EzGiving0.jpg"></a>
+                    </li>
+                
+                    <li id="Q_Committees" style="padding: 1px !important;">
+                        	<a href="https://www.dacdb.com/Committees/Index.cfm?ClubID=0" style="padding: 1px 1px;" target="main" title="Committees">			    <img class="ShortImage" style="height:28px;width:28px;" src="./Committees0.jpg"></a>
+                    </li>
+                
+        </div>
+    </div>
+</div>
+			</div>
+		</div>
+
+		
+	 	
+
+		<div class="wrapper">
+			<header class="main-header" style="max-height: none;">
+				<!-- Header Navbar: style can be found in header.less -->
+				<nav class="navbar navbar-default" role="navigation">
+					<div class="container-fluid">
+						
+						<div class="navbar-header navbar-left pull-left">
+							
+									<a class="navbar-brand" href="http://memberminderpro.com/" target="_blank" style="margin-top: -7px;">
+									<img src="./RILicenseLogo.png" class="img-responsive" style="margin-left: 9px; margin-right:4px; height:40px; margin-top: 3px;">
+								
+								</a>
+							
+							
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarNavDropdown">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+
+						
+						<div class="navbar-header navbar-right pull-right">
+							<ul class="nav pull-left">
+								
+								
+
+										
+										<li class="disappear" id="acctname" style="display: inline-flex !important;">
+											
+													<a href="http://www.rotary5020.org/" target="_blank" style="padding-top: 15px; padding-right: 4px;" data-toggle="popover" data-placement="left" data-trigger="hover" data-content="Click to visit your District website" data-original-title="" title="">
+														Rotary District 5020 (Z27)
+													</a>
+												
+															<a href="https://gigharborrotary.org/" target="_blank" style="padding-left: 0px; padding-top: 15px;" data-toggle="popover" data-placement="left" data-trigger="hover" data-content="Click to visit your Club website" data-original-title="" title="">- Gig Harbor<span style="font-size:12px;">&nbsp;&nbsp;[RI-Direct]</span></a>
+														
+										</li>
+									
+								<!-- User Account: style can be found in dropdown.less -->
+								<li class="dropdown user pull-right" id="navgroup" style="display: inline-flex !important;margin-right: -14px !important;">
+									
+									<a href="https://www.dacdb.com/Header.cfm?fw=Home&amp;##" id="cartmsg" style="display: block; padding-left: 10px; padding-right: 9px;" data-toggle="popover" data-placement="left" data-trigger="hover" data-content="Subscription Center" data-original-title="" title="" class="ClubAccessCart"> 
+										<i id="cartimg" class="fa fa-cart-plus" style="color: white; padding-top: 8px; font-size: larger;"></i>
+										<span id="cartflag" class="label label-warning" style="right: 6px; height: 12px; padding: 1px; top: 9px; background-color: rgb(221, 75, 57) !important; display: none;">
+											<span class="glyphicon glyphicon-flag" style="font-size: 11px;"></span>
+										</span>
+									</a>
+									
+									
+										<a href="https://www.dacdb.com/Header.cfm?fw=Home&amp;##" id="notifymsg" style="padding-left: 10px; padding-right: 9px;" data-toggle="popover" data-placement="left" data-trigger="hover" data-content="Notifications" data-original-title="" title=""> 
+									
+										<i class="far fa-bell" style="color: white; padding-top: 8px; font-size: larger;"></i>
+										<span id="notifyCnt" class="label label-warning" style="background-color: #dd4b39 !important; font-size: 11px; padding: 2px 3px; vertical-align: top !important;"></span>
+									
+									</a>
+
+									<a href="https://www.dacdb.com/Header.cfm?fw=Home&amp;#" id="nav" style="padding-top: 12px; margin-bottom: -2px">
+										<!-- Grab user profile image to use here -->
+										
+													<img id="uimage" src="./M801499891.jpg" class="user-image" alt="User Image">
+												
+											<span id="uname" class="hidden-xs">Bonds, Fletcher</span>
+										
+									</a>
+								</li> 
+							</ul> 
+						</div> 
+						<div class="visible-xs-block clearfix"></div>  
+
+						
+						<div class="collapse navbar-collapse" id="navbarNavDropdown" style="margin-bottom: -7px; ">
+							<!-- Main app navigation tabs loaded from tblMenu -->
+							<ul class="nav navbar-nav" style="margin-top:18px;">
+								<ul class="nav nav-tabs" id="Tabs" style="border: medium none; margin-left:4px;margin-bottom: 10px;">
+									
+													<li id="Tab1">
+												
+												<a href="https://www.dacdb.com/FindMember/Index.cfm" target="main" class="DefaultLink">Find</a>
+												
+											<span>
+										
+												</span></li>
+											
+													<li id="Tab2">
+												
+												<a href="https://www.dacdb.com/Member2/Member.cfm" target="main" class="DefaultLink">My DATA</a>
+												
+											<span>
+										
+												</span></li>
+											
+													<li id="Tab3" class="active">
+												
+												<a href="https://www.dacdb.com/MyClub/Index.cfm" target="main" class="DefaultLink">My CLUB</a>
+												
+											<span>
+										
+												</span></li>
+											
+													<li id="Tab4">
+												
+												<a href="https://www.dacdb.com/DistrictM/Index.cfm" target="main" class="DefaultLink">My DISTRICT</a>
+												
+											<span>
+										
+												</span></li>
+											
+													<li id="Tab5">
+												
+												<a href="https://www.dacdb.com/Dashboard2/index.cfm" target="main" class="DefaultLink">My STORIES</a>
+												
+											<span>
+										
+												</span></li>
+											
+													<li id="Tab6" style="background-color: green;">
+												
+												<a href="https://www.dacdb.com/help2/deskpro.cfm" target="_blank" class="DefaultLink">My SUPPORT / LEARNING</a>
+												
+											<span>
+										
+									</span></li>
+									<div style="padding:5px;float:left;">
+										
+											<label class="toggle-switch">
+												<input type="checkbox">
+												<span class="slider">
+													<span class="on-text" style="padding-left:5px;">Ignite</span>
+													<span class="off-text" style="padding-left:15px;">PRO</span>
+												</span>
+											</label>
+										
+									</div>
+								</ul> 
+							</ul> 
+						</div> 
+
+					</div> 
+				</nav> 
+			</header>  
+		</div> 
+		
+		
+
+		<iframe class="iframe-body" name="main" id="imain" src="./Home.html" rows="*" framespacing="0" marginwidth="0" marginheight="0" scrolling="Auto" width="100%" frameborder="No" border="0" style="position:absolute;z-index:98;height: calc(100% - 67px); height: -o-calc(100% - 67px);height: -webkit-calc(100% - 67px);height: -moz-calc(100% - 67px);"></iframe>
+
+		
+		<div id="popup-1" class="slickModal"><div class="slickOverlay sm-animated" style="background: rgba(70, 138, 194, 0.25); animation-duration: 0.3s;"></div>
+			<div class="slickWindow sm-animated sm-topCenter" style="box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 20px; background: ghostwhite; animation-duration: 1s; animation-delay: 0.15s; border-radius: 4px; width: 750px; height: 480px; margin: 80px auto; padding: 5px;"><div class="slickCloseBtn close closeModal text"></div>
+					<!-- Your popup content -->
+	            <div class="slickContent"><div class="title noprint" style="padding-top:5px;text-align:center;font-size:18px;font-weight:bold;color:#8D0E3A;text-decoration-line: underline;text-decoration-color:#23415e;">DACdb System Notification<br></div><div id="popuptable" class="table-responsive" style="padding:0;padding-top:5px;height:440px;overflow:auto;">
+						<p id="userMessage"></p> 
+					</div><div class="closeModal cta"></div></div>
+					<!-- Main content -->
+					
+					
+				<!-- / Your popup content -->
+			</div>
+		</div>
+		<a href="https://www.dacdb.com/Header.cfm?fw=Home&amp;#" class="openSlickModal-1" id="popupk" style="display: none;"></a>
+
+		
+		
+
+		
+		<div id="notificationwrap" style="background-color:#23415e;position: absolute;z-index:1999;min-width:100px;width:80%;margin:auto;right: 148px;top:68px;display:none;padding:6px;min-height:100px;">
+			<div id="notificationload" class="container-fluid" style="background-color:ghostwhite; padding: 5px;">
+			</div>
+		</div>
+
+		
+		<div id="cartwrap" style="background-color:#23415e;position: absolute;z-index:2050;min-width:100px;right:0px;margin:auto;left: 0px;top:68px;display:none;padding:6px;min-height:100px;">
+			<div id="cartload" class="container-fluid" style="background-color:ghostwhite; padding: 5px;max-height: calc(100vh - 62px);">
+			</div>
+		</div>
+
+		
+
+		<div id="hidecontain">
+			<div id="CartDetailDiv" style="z-index: 4999" title="Cart">
+			</div>
+		</div>	
+
+		<div id="hidecontain2">
+			<div id="SubDetailDiv" style="z-index: 4999" title="Cart">
+			</div>
+		</div>	
+
+		<div id="hidecontain3">
+			<div id="SubPaymentDiv" style="z-index: 4999" title="Cart">
+			</div>
+		</div>	
+
+	
+
+	
+		
+		<script src="./jquery.min.js"></script>
+		<script type="text/javascript" src="./jquery-ui.js"></script>
+
+		<script type="text/javascript" src="./popper.min.js"></script>
+
+	  	
+	  	<script src="./bootstrap.min.js"></script>
+
+		<script type="text/javascript" src="./slickModal.min.js"></script>
+
+		
+		<script type="text/javascript" src="./jquery.validate.min.js"></script>
+		<script type="text/javascript" src="./Common.js"></script>
+		<script type="text/javascript" src="./Required.js"></script>
+
+		
+		<script type="text/javascript" src="./sweetalert2.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="./Required.css">
+
+		
+	    <script>
+		    // handle jQuery plugin naming conflict between jQuery UI and Bootstrap
+		    $.widget.bridge('uibutton', $.ui.button);
+		    $.widget.bridge('uitooltip', $.ui.tooltip);
+			$(document).ready(function(){
+				var bootstrapButton = $.fn.button.noConflict();
+				$.fn.bootstrapBtn = bootstrapButton;
+			});
+		</script>
+		<!-- Bootstrap WYSIHTML5 -->
+		
+		
+
+	  	<script>
+	    	$(document).ready(function(){
+
+	    		$.ajaxSetup ({
+					cache: false
+				});
+
+				// Ignite toggle
+				$(".toggle-switch").on("change", function(event) {
+					if (event.target.checked) {
+							console.log("Ignite");
+							$.ajax({
+								type: "POST",
+								url: "IgniteSetJWT.cfm?"+Math.random(),
+								data: {	Ignite: 'Y'
+								},
+								success: function(data) {
+									var obj = $.parseJSON(data);
+									if (!obj.SUCCESS) {
+										alert(obj.ERROR);
+									}
+									else{
+										window.parent.location.href = obj.MYIGNITELINK;
+									}
+								}
+							});
+						} else {
+							console.log("Pro");
+							return false;
+						}
+				});
+
+				$('[data-toggle="popover"]').popover();
+
+				localStorage.setItem("UserUI", "Icons");
+
+				if (localStorage.getItem("SubType") === null)
+					localStorage.setItem("SubType", "Club");
+
+				// Refresh subscription cart flag
+				RefreshFlag();
+				//console.log("FIRST HEADER LOAD");
+
+				$( "#notifymsg" ).click(function() {
+					// Hide logout dropdown
+					$("#usermenu").fadeOut("fast");
+	            	$("#cartwrap").slideUp("fast");
+
+					// Reload the notifications only if the dropdown is closed
+					var isHidden = $( "#notificationwrap" ).is( ":hidden" );
+					if (isHidden) {
+						// Align the notification dropdown under the bell
+						$("#notificationwrap").css({ right: ($('#navgroup').outerWidth()-$('#notifymsg').width()-5)});
+
+						$("#notifyCnt").text("");
+						$("#notifyCnt").css("display", "none");
+						LoadNotifications();
+						PollNotifications("True");
+					}
+					else {
+						// If there are no notification, old or new, hide the bell
+						if ($('#NoNotifications').length) {
+							$("#notifymsg").css("display", "none");
+							$("#notifyCnt").css("display", "none");
+							$("#notifyCnt").text("");
+							$("#notificationwrap").fadeOut("fast");
+							return false;
+						}
+						else {
+							// If there were new notifications that came in while dropdown was open,
+							// mark them as read.
+							// Removed to always show notification count whether read or not
+							//if ($("#notifyCnt").text() > 0) {
+							//	PollNotifications("True");
+							//}
+						}
+					}
+					$("#notificationwrap").toggle("fast");
+				});
+
+				$( "#lvl9T, #lvl9B").click(function() {
+					$("#notificationwrap").fadeOut("fast");
+	            	$("#cartwrap").slideUp("fast");
+					$("#usermenu").fadeOut("fast");
+				});
+
+				$( "#cartmsg" ).click(function() {
+					// Hide logout dropdown
+					$("#usermenu").fadeOut("fast");
+	            	$("#notificationwrap").fadeOut("fast");
+
+					// Load the cart items
+					var isHidden = $( "#cartwrap" ).is( ":hidden" );
+					if (isHidden) {
+						var stype = localStorage.getItem("SubType");
+						if (stype == "Club")
+							LoadCart(-1);
+						else
+							LoadCart(0);
+					}
+					else {
+						// If there are no cart items hide the cart icon
+						if ($('#CartItems').length) {
+							$("#cartmsg").css("display", "none");
+							return false;
+						}
+					}
+
+					$("#cartwrap").slideToggle("fast");
+					//toggleCart();
+				});
+
+				// Collapse the menu bar if expanded (on moble devices)
+	/*			var toggleCart = function () {
+					// Hide logout dropdown
+					$("#usermenu").fadeOut("fast");
+	            	$("#notificationwrap").fadeOut("fast");
+
+					var isHidden = $( "#cartwrap" ).is( ":hidden" );
+					if (isHidden) {
+						var stype = localStorage.getItem("SubType");
+						if (stype == "Club")
+							LoadCart(-1);
+						else
+							LoadCart(0);
+					}
+					else {
+						// If there are no cart items hide the cart icon - change bootstrap ICON here
+						if ($('#CartItems').length) {
+							//$("#cartmsg").css("display", "none");
+							//return false;
+							var stype = $("#ClubID").val();
+							localStorage.setItem("SubType", "Account");
+						}
+					}
+					$("#cartwrap").slideToggle("fast");
+				};
+	*/
+				// Toggle the drop down user login information on user name click
+	        	$("#nav").click(function(){
+
+	        		// Reload the notifications only if the dropdown is closed
+					var isHidden = $( "#usermenu" ).is( ":hidden" );
+					var disp = $("#usermenu").css('display');
+					if (isHidden || disp == 'none') {
+		            	// Poll notifications before logout or account/id switch
+						PollNotifications("False");
+	   				}
+	            	$("#usermenu").toggle();
+	            	$("#notificationwrap").fadeOut("fast");
+	            	$("#cartwrap").slideUp("fast");
+	           	});
+
+				$('#Tabs a').click(function (e) {
+					// Change the active tab when clicked
+					let targ = $(e.target).toString();
+					let incdesk = targ.includes("deskpro");
+					if (! incdesk) { //Do not activate support tab
+						$("#Tabs > .active").removeClass('active');
+						$(e.target).parent().addClass('active');
+						//console.log('includes: '+incdesk);
+					}
+
+					// Close the user dropdowns if open
+					$("#usermenu").fadeOut("fast");
+					$("#notificationwrap").fadeOut("fast");
+					$("#cartwrap").slideUp("fast");
+
+					// hide the narrow shortcut menu if displayed - provides smoother transition visually before going to the link
+					$("#shortcuts").css('display', 'none');
+
+					toggleBar();
+
+	         	});
+
+	         	// hide the reduced width shortcut menu when a link is clicked - provides smoother transition visually before going to the link
+	         	$('#shortcuts').on('click','A',function(){
+				    $("#shortcuts").css('display', 'none');
+				});
+
+	         	$("#shortcuts").click(function(){
+					$("#usermenu").fadeOut("fast");
+					$("#notificationwrap").fadeOut("fast");
+					$("#cartwrap").slideUp("fast");
+				});
+
+				// Close the user dopdowns when clicked
+	          	$("#usermenu").click(function(){
+	          		$("#usermenu").fadeOut("fast");
+	          		$("#notificationwrap").fadeOut("fast");
+					$("#cartwrap").slideUp("fast");
+	          	});
+
+				// Collapse the menu bar if expanded (on moble devices)
+				var toggleBar = function () {
+					var canSee = $(".navbar-toggle").hasClass("collapsed");
+					//alert(canSee);
+	   				if (!canSee) {
+					    $('.navbar-toggle').click();
+					}
+				};
+
+			    // Adjust the size of the main iframe according to whether the menu is expanded or collapsed on moble devices
+	          	var onResize = function() {
+					var ishidden = $(".navbar-toggle").hasClass("collapsed");
+					if (!ishidden) {
+						//alert('Expanded');
+					    $("#imain").css("height", "calc(100% - 117px)");
+					    $("#imain").css("height", "-o-calc(100% - 117px)");
+	   				    $("#imain").css("height", "-webkit-calc(100% - 117px)");
+	   				    $("#imain").css("height", "-moz-calc(100% - 117px)");
+					} else {
+						//alert('Collapsed');
+					    $("#imain").css("height", "calc(100% - 67px)");
+					    $("#imain").css("height", "-o-calc(100% - 67px)");
+	   				    $("#imain").css("height", "-webkit-calc(100% - 67px)");
+	   				    $("#imain").css("height", "-moz-calc(100% - 67px)");
+					}
+				};
+
+				// attach the functions to the window resize event
+				$(window).resize(function () {
+					toggleBar();
+					onResize();
+				});
+
+				// Call the function when the page is ready after load or reload
+				$(function() {
+				    onResize();
+	 			});
+
+				// Call the function when the menu is collapsed
+	           	$('#navbarNavDropdown').on('hidden.bs.collapse', function () {
+	  				onResize();
+	 			});
+
+				// Call the function when the menu is expanded
+	           	$('#navbarNavDropdown').on('shown.bs.collapse', function () {
+	  				onResize();
+	 			});
+
+				// Actions performed each time a new page is loaded in the "main" iframe
+	   			$("iframe").on('load', function(){
+
+	 				localStorage.setItem("PageStatus", "Load");
+
+					var imainframe=$('#imain').contents();
+					var menu = imainframe.find(".sidebar-menu");
+
+					// Get the name of the current page loaded in the main iframe. Display and position the
+					// shortcuts icon menus appropriately if the page is not excluded from the list.
+
+					// List pages here that don't need css menu header override and that don't need the shortcuts menus
+					var iframeUrl = document.getElementById("imain").contentWindow.location.href;
+					if ((iframeUrl.toLowerCase().indexOf("accounts/") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("accounts\\") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("accounting/mystatement.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("accounting/reports/") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("admin/membertype_admin.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("admin/googlecal_main.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("clubattendance/attendance.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("clubattendance/submitattendanceload.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("dashboard/dashboard.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("dashboard2/index_dashhome.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("engagement/reports/memberreport.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("/excel/") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("files/file/fileedit.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("help/sectrain") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("help/covid19") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("help/dco") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("help/uc2019") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("import/") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("report2/dynadump/report") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("report2/region/report") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("report2/unpaidmembers/report") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("/report/report.cfm") >= 0)||
+						(iframeUrl.toLowerCase().indexOf("rli/reports/billingreport.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("runreport.cfm") >= 0)||
+						(iframeUrl.toLowerCase().indexOf("subscription/clubfind.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("subscription/expiredsubscriptions.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("subscription/daily.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("subscription/fop.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("subscription/index.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("subscription/subscriptions.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("/temp/") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("test/index.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("util/buildcommitteefrommemberids.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("util/spoolmail.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("util/version.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("util/whoison.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("util/util_missingdoa.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("util/util_missingri.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("util/util_setlogincredentials.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("myclub/index.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("engagement/subscribe.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("engagement/summary2.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("util/util_clubsize.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("website2/index2.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("gallery/gallery.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("engagement/publicimage.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("socialmedia/index.cfm") >= 0) ||
+						(iframeUrl.toLowerCase().indexOf("zonereports/zonedirectory.cfm") >= 0)) {
+							$("#shortcuts").css('display', 'none');
+					}
+					else {
+						// If a visible sidebar menu is found, override the menu header css, and append shortcuts menu with formating to relevant pages
+						if(menu.length && (menu.css('display') != 'none')) {
+							// In case the previous screen included the reduced width shortcuts menu, hide it
+							$("#shortcuts").css('display', 'none');
+							// Change the css of the sidebar menu consistent with new ui -
+							// When classic ui is depricated, remove this code and make change permenant in sidebar-menu.css
+				        	var headsec = imainframe.find("head");
+							headsec.append('<style>.sidebar-menu > li > a { padding: 5px 3px 5px 5px !important; }</style>');
+							headsec.append('<style>.sidebar-menu > li:hover > a, .sidebar-menu > li.active > a { background: #23415e !important; }</style>');
+					        headsec.append('<style>.sidebar-menu li.header {background: #23415e !important;}</style>');
+							headsec.append('<style>.sidebarcolumn { top: 1px !important; height: 100vh !important; overflow-y: auto !important; }</style>');
+
+							// List pages here that need css header update but don't need the shortcuts menus
+							if ((iframeUrl.toLowerCase().indexOf("districtm/index.cfm") >= 0) ||
+								(iframeUrl.toLowerCase().indexOf("help2/") >= 0) ||
+								(iframeUrl.toLowerCase().indexOf("myclub/index.cfm") >= 0)) {
+									//$("#shortcuts").css('display', 'none');
+							}
+							else {
+								// Must remove to make dynamic if number of possible shortcuts exceeds 6 per tab.
+								headsec.append('<style> #innerclub { max-height: 60px;} </style>');
+								headsec.append('<style> #innerdist { max-height: 30px;} </style>');
+
+								// Search for existing bootstrap css and override the popover appropriately
+								if (headsec.html().indexOf("bootstrap.css") < 0) {
+									// Format the popover for pages with no bootstrap css
+									headsec.append('<style> .popover { z-index:3999 !important;position: fixed !important;color:black !important;background-color:white !important;padding:10px !important;border: 1px solid #ccc !important;border: 1px solid rgba(0, 0, 0, .2) !important;border-radius: 6px !important;-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2) !important;box-shadow: 0 5px 10px rgba(0, 0, 0, .2) !important;} </style>');
+									//console.log("Adding popover style");
+								}
+								else {
+									headsec.append('<style> .popover { z-index:3999 !important;position: fixed !important;} </style>');
+								}
+
+								// Clone and add the Shortcuts menu to the sidebar menu
+								var short2Clone = $('#shortcuts2').clone();
+								menu.append(short2Clone);
+
+								// Activate the popovers on the shortcuts menu
+							    var element = imainframe.find('[data-toggle="popover"]');
+								element.popover();
+							}
+						}
+						else {
+							// If there is no sidebar and it's an ezBulletin or eMeeting page, do not display the menu overlay
+							if ((iframeUrl.toLowerCase().indexOf("/emeeting/") >= 0) ||
+								(iframeUrl.toLowerCase().indexOf("/ezbulletin2/") >= 0) ||
+								(iframeUrl.toLowerCase().indexOf("/ezbulletin/") >= 0)) {
+								$("#shortcuts").css('display', 'none');
+							}
+							else {
+								// Sidebar menu was not found, so display the reduced width shortcuts sidebar menu overlay
+								$("#shortcuts").css('display', 'block');
+								$("#clubcontain").css('margin-left', '4px');
+								$("#clubcontain").css('padding-top', '3px');
+								$("#clubcontain").css('padding-bottom', '3px');
+								$("#distcontain").css('margin-left', '4px');
+								$("#distcontain").css('padding-top', '3px');
+								$("#distcontain").css('padding-bottom', '3px');
+								$("#clubshortlabel").css('padding-bottom', '5px');
+								$("#distshortlabel").css('padding-bottom', '5px');
+								$("#clubshortlabel").css('padding-top', '5px');
+								$("#distshortlabel").css('padding-top', '5px');
+								$("#clubshortlabel").css('padding-left', '8px');
+								$("#distshortlabel").css('padding-left', '8px');
+								$('[data-toggle="popover"]').popover();
+							}
+						}
+					}
+
+					// Detect a click inside the iframe and close any open dropdown menus
+			        imainframe.on("mousedown, mouseup, click", function(){
+	        		    $("#usermenu").fadeOut("fast");
+						$("#notificationwrap").fadeOut("fast");
+		            	$("#cartwrap").slideUp("fast");
+	        		    toggleBar();
+		       		});
+
+					// Detect a click on a Club shortcuts and activate the Club tab
+					imainframe.find("#clubcontain").on("mousedown, mouseup, click", "A", function(){
+						$("#Tabs > .active").removeClass('active');
+						$("#Tabs li:contains('My CLUB')").addClass('active');
+					});
+
+					// Detect a click on a District shortcuts and activate the District tab
+					imainframe.find("#distcontain").on("mousedown, mouseup, click", "A", function(){
+						$("#Tabs > .active").removeClass('active');
+						$("#Tabs li:contains('DISTRICT')").addClass('active');
+					});
+
+	    		});
+
+				// Load the favories icon menus
+				LoadShortcuts();
+
+				// Save for notifications
+	 			// Start a timed poll to check for system notifications
+				(function startPoll() {
+					// Only poll if popup is closed: prevents overlay animation bug and prevents unecessary queries
+					var isVisible = $("#popup-1").is(":visible");
+					if (!isVisible) {
+						//console.log("popup is closed!!!");
+						// Pass false if the notification is not being read
+
+						// Turn off timed polling until needed - turn on by uncommenting line below
+						//PollNotifications("False");
+					}
+				    setTimeout(startPoll, 300000);  // 900000 = Every 5 minutes
+				    //setTimeout(startPoll, 900000);  // 900000 = Every 15 minutes
+				    //setTimeout(startPoll, 3930000);  // 3930000 = Every 1 hour and 5 minutes - this allows the 1 hour session timeout
+				    //setTimeout(startPoll, 2190000);  // 1080000 = Every 6 hours and 5 minutes - this allows the 3 hour session timeout
+					
+				}());
+
+			    // Immediate Notificastions Modal 1 -
+		        $('#popup-1').slickModals({
+		            // Hide on pages
+		            hideOnPages: ['/page1/','/page2/','/page3/'],
+		            // Popup type
+		            popupType: 'none',
+		            delayTime: 0,
+		            scrollTopDistance: 400,
+		            // Auto closing
+		            autoClose: false,
+		            autoCloseDelay: 10000,
+		            // Statistics
+		            enableStats: false,
+		            fileLocation: 'slickStats/collect.php',
+		            modalName: 'My awesome modal 1',
+		            modalSummary: 'Lorem ipsum dolor sit amet',
+		            callToAction: 'cta',
+		            // Popup cookies
+		            setCookie: false,
+		            cookieDays: 30,
+		            cookieTriggerClass: 'setCookie-1',
+		            cookieName: 'slickModal-1',
+		            cookieScope: 'domain',
+		            // Overlay styling
+		            overlayVisible: true,
+		            overlayClosesModal: false,
+		            overlayColor: 'rgba(70, 138, 194, 0.25)',
+		            overlayAnimationDuration: '0.3',
+		            overlayAnimationEffect: 'zoomIn',
+		            // Background effects
+		            pageAnimationDuration: '0.2',
+		            pageAnimationEffect: 'blur',
+		            pageBlurRadius: '1px',
+		            pageScaleValue: '0.9',
+		            pageMoveDistance: '30%',
+		            // Popup styling
+		            popupWidth: '750px',
+		            popupHeight: '480px',
+		            popupLocation: 'topCenter',
+		            popupAnimationDuration: '1',
+		            popupAnimationEffect: 'swingTop',
+		            popupBoxShadow: '0 0 20px rgba(0,0,0,0.4)',
+		            popupBackground: 'Ghostwhite',
+		            popupRadius: '4px',
+		            popupMargin: '80px',
+		            popupPadding: '5px',
+		            // Mobile rules
+		            showOnMobile: true,
+		            responsive: true,
+		            mobileBreakPoint: '750px',
+		            mobileLocation: 'center',
+		            mobileWidth: '90%',
+		            mobileHeight: '480px',
+		            mobileRadius: '0px',
+		            mobileMargin: '0px',
+		            mobilePadding: '24px',
+		            // Animate content
+		            contentAnimation: true,
+		            contentAnimationEffect: 'slideTop',
+		            contentAnimationDuration: '0.4',
+		            contentAnimationDelay: '0.8',
+		            // Youtube videos
+		            videoSupport: false,
+		            videoAutoPlay: false,
+		            videoStopOnClose: false,
+		            // Close and reopen button
+		            addCloseButton: true,
+		            buttonStyle: 'text',
+		            enableESC: true,
+		            reopenClass: 'openSlickModal-1',
+		            // Additional events
+		            onSlickLoad: function() {
+		            	// Close the user login dropdown if open
+		                //$("#usermenu").fadeOut("fast");
+		                //$("#notificationwrap").fadeOut("fast");
+		            },
+		            onSlickClose: function() {
+	   					// Pass the id of the notification read
+						PollNotifications($("#popupk").text());
+
+						// Reload the notifications, remove new count and poll them as read only if the dropdown is OPEN
+						var isHidden = $( "#notificationwrap" ).is( ":hidden" );
+						if (isHidden) {
+							// Removed to always show notification count whether read or not
+							//var cnt = $("#notifyCnt").text() - 1;
+							//$("#notifyCnt").text(cnt);
+							//if (cnt == 0) {
+							//	$("#notifyCnt").css("display", "none");
+							//}
+						}
+
+						setTimeout(function() {
+							PollNotifications("False");
+						}, 5000);
+		            }
+		        });
+
+				// Level 1 - downgraded user role modal
+				if ($("#popup-LVL1").length) {
+				    // Modal LVL1
+			        $('#popup-LVL1').slickModals({
+			            // Hide on pages
+			            hideOnPages: ['/page1/','/page2/','/page3/'],
+			            // Popup type
+			            popupType: 'none',
+			            delayTime: 0,
+			            scrollTopDistance: 400,
+			            // Auto closing
+			            autoClose: false,
+			            autoCloseDelay: 10000,
+			            // Statistics
+			            enableStats: false,
+			            fileLocation: 'slickStats/collect.php',
+			            modalName: 'My awesome modal 1',
+			            modalSummary: 'Lorem ipsum dolor sit amet',
+			            callToAction: 'cta',
+			            // Popup cookies
+			            setCookie: false,
+			            cookieDays: 30,
+			            cookieTriggerClass: 'setCookie-1',
+			            cookieName: 'slickModal-1',
+			            cookieScope: 'domain',
+			            // Overlay styling
+			            overlayVisible: true,
+			            overlayClosesModal: false,
+			            overlayColor: 'rgba(70, 138, 194, 0.25)',
+			            overlayAnimationDuration: '0.5',
+			            overlayAnimationEffect: 'zoomIn',
+			            // Background effects
+			            pageAnimationDuration: '0.4',
+			            pageAnimationEffect: 'blur',
+			            pageBlurRadius: '1px',
+			            pageScaleValue: '0.9',
+			            pageMoveDistance: '30%',
+			            // Popup styling
+			            popupWidth: '450px',
+			            popupHeight: '260px',
+			            popupLocation: 'topCenter',
+			            popupAnimationDuration: '1',
+			            popupAnimationEffect: 'swingTop',
+			            popupBoxShadow: '0 0 20px rgba(0,0,0,0.4)',
+			            popupBackground: 'Ghostwhite',
+			            popupRadius: '4px',
+			            popupMargin: '80px',
+			            popupPadding: '30px',
+			            // Mobile rules
+			            showOnMobile: true,
+			            responsive: true,
+			            mobileBreakPoint: '480px',
+			            mobileLocation: 'center',
+			            mobileWidth: '90%',
+			            mobileHeight: '280px',
+			            mobileRadius: '0px',
+			            mobileMargin: '0px',
+			            mobilePadding: '24px',
+			            // Animate content
+			            contentAnimation: true,
+			            contentAnimationEffect: 'slideTop',
+			            contentAnimationDuration: '0.4',
+			            contentAnimationDelay: '0.8',
+			            // Youtube videos
+			            videoSupport: false,
+			            videoAutoPlay: false,
+			            videoStopOnClose: false,
+			            // Close and reopen button
+			            addCloseButton: true,
+			            buttonStyle: 'text',
+			            enableESC: true,
+			            reopenClass: 'openSlickModal-LVL1',
+			            // Additional events
+			            onSlickLoad: function() {
+			            	// Close the user dropdown menu if open
+			                //$("#usermenu").fadeOut("fast");
+			                //$("#notificationwrap").fadeOut("fast");
+			            },
+			            onSlickClose: function() {
+			            }
+			        });
+			        $('#popuplvl1').click();
+	 			}
+
+				// Add functions involving the newly loaded shortcuts in the reduced width menu overlay
+				setTimeout(function() {
+					$('[data-toggle="popover"]').popover();
+					// Detect a click on a Club shortcuts and activate the Club tab
+					$('#clubcontain').on('click', 'A', function(){
+						$("#Tabs > .active").removeClass('active');
+						$("#Tabs li:contains('My CLUB')").addClass('active');
+					});
+
+					// Detect a click on a District shortcuts and activate the District tab
+					$('#distcontain').on('click', 'A', function(){
+						$("#Tabs > .active").removeClass('active');
+						$("#Tabs li:contains('DISTRICT')").addClass('active');
+					});
+				}, 700);
+	  		});
+
+			function LoadNotifications() {
+				// Reload notifications for new messages
+				$( "#notificationload" ).load('Notifications/NotificationDialog.cfm?r='+Math.random(), function() {
+					//console.log("LOADING Notifications");
+
+					$( "#CheckAll" ).on("click", function() {
+						//console.log("checked?");
+						$('input:checkbox').not(this).prop('checked', this.checked);
+					});
+
+					$('.Delete').on('click', function() {
+						var id = $(this).attr( "id" );
+						//alert("Delete="+id);
+						//if (!window.confirm("Please confirm - this will delete the selected Notification?")) {
+							//alert("Not deleted!");
+						//	return false;
+						//}
+						$.ajax({
+							type: "POST",
+							url: "Notifications/Del.cfm?"+Math.random(),
+							data: {
+								NotificationID: id
+							},
+							success: function(data) {
+								ReloadNotifications();
+								PollNotifications("False");
+							}
+						});
+					});
+					//;
+
+					$('#Delete').on('click', function() {
+						//post the form for deletion
+						$.ajax({
+							type: "POST",
+							url: "Notifications/NotificationDialog.cfm?Action=D",
+							data: $("#form").serialize(),
+							success: function(data) {
+								ReloadNotifications();
+								PollNotifications("False");
+							}
+						});
+						//Don't allow form reload in new ui
+						event.preventDefault();
+					});
+
+					// If all of the notifications were logically deleted, hide the notification bell
+					if ($('#NoNotifications').length) {
+						$("#notifyCnt").css("display", "none");
+						$("#notifyCnt").text("");
+						setTimeout(function() {
+							$("#notifymsg").css("display", "none");
+							$("#notificationwrap").fadeOut("fast");
+						}, 2000);
+
+					}
+				});
+			}
+
+			function LoadCart(cid) {
+				// If user does not have full access, limit to club cart
+				var ca = "District";
+				if ($("#cartmsg").hasClass( "DistrictAccessCart" ) == false) {
+					ca = "Club";
+					if (cid == 0)
+						cid = -1;
+				}
+				// Reload Cart items for subscriptions management
+				$( "#cartload" ).load('Subscriptions/Cart.cfm?ClubID='+cid+'&CartAccess='+ca+'&r='+Math.random(), function() {
+					//console.log("LOADING Cart, CartAccess="+ca+", ClubID="+cid);
+
+					$('.AddSub').on('click', function() {
+						var pid  		= this.id;
+						var freadonly  	= $("#fReadOnly").val();
+						var flocked  	= $("#fLocked").val();
+						var price 		= parseInt($("#"+pid+"_Price").text());
+						//console.log("readonly="+freadonly+" Locked="+flocked+" Price="+price);
+						if ((freadonly == "FALSE" && flocked == "FALSE") || price == 0) {
+							// Give level 9s a warning so they don't forget to impersonate the buyer
+							if (9 == 4) {
+								Swal.fire({
+									title: '<strong>Confirm Level 9 Subscription</strong>',
+									icon: 'warning',
+									showCancelButton: true,
+									html:
+									'You are about to add a subscription using your Level 9 identity.  Confirm if you would like to continue.  Otherwise, select Cancel and impersonate the correct user.',
+										confirmButtonColor: '#3085d6',
+										confirmButtonText: 'Confirm Level 9'
+								}).then((result) => {
+									if (result.isConfirmed) {
+										var cid  	= $("#ClubID").val();
+										var pname 	= $("#"+pid+"_Add").text();
+										//console.log("PlanID="+pid+" PName="+pname);
+										// This is the function that will add to the cart
+										CartDetailDialog(cid, 0, pname, '', '', pid);
+									}
+								});
+							}
+							else {
+								var cid  	= $("#ClubID").val();
+								var pname 	= $("#"+pid+"_Add").text();
+								//console.log("PlanID="+pid+" PName="+pname);
+								// This is the function that will add to the cart
+								CartDetailDialog(cid, 0, pname, '', '', pid);
+							}
+						}
+						else {
+							if (flocked) alert("Your subscription account has been locked, please contact support.");
+							else if (freadonly) alert("Your current security level is not authorized to purchase Modules.");
+						}
+						// This is the temp method for subscribing immediately
+						return false;
+					});
+
+					$('.RenewSub').on('click', function() {
+						var sid  		= this.id;
+						var freadonly  	= $("#fReadOnly").val();
+						var flocked  	= $("#fLocked").val();
+						if (freadonly == "FALSE" && flocked == "FALSE") {
+							var cid  	= $("#ClubID").val();
+							var freq  	= $("#"+this.id+"_Freq").val();
+							var bill	= $("#"+this.id+"_Bill").val();
+							//console.log('Bill='+bill+' Freq='+freq);
+							// Check to see if a single renewal or if needs to be renewed with other subscriptions tied to a master subscription
+							if (bill != 'Y' && (freq == 'A' || freq == 'P' || freq == 'C')) {
+								$.ajax({
+									type: "POST",
+									url: "Subscriptions/Cart/CheckRenewals.cfm?"+Math.random(),
+									data: {
+										SubscriptionID: sid,
+										ClubID: cid
+									},
+									success: function(data) {
+										//var obj = $.parseJSON(data);
+										//if (!obj.SUCCESS)
+										var renewals = $.parseJSON(data);
+										//console.log('Renewals='+renewals);
+										if (!renewals)
+											// This is the function that will add the single renewal to the cart
+											CartDetailDialog(cid, 0, 'Renew Subscription', '', '', 0, '', 0, '', sid);
+										else {
+											// This will add multiple renewals to the cart, and bundled appropriately
+											//CartRenewalsDialog(cid, 'Renew Subscriptions', obj.SIDS);
+											//console.log("SUBSCRIPTION IDS FOR RENEWAL="+obj.RENEWALS[1].SUBSCRIPTIONID);
+											var renewnote = window.prompt('All standard subscriptions will be renewed together, and if applicable, be bundled to ensure the best rate possible. If you do not wish to renew one or more subscriptions you can cancel them individually.  Please enter any notes or comments for the subscription renewals.', '');
+											if (renewnote == null)
+												return false;
+											else {
+												// Add the multiple renewals
+												$.ajax({
+													type: "POST",
+													url: "Subscriptions/Cart/AddRenewalItems.cfm?"+Math.random(),
+													data: {
+														SubscriptionID: sid,
+														ClubID: cid,
+														Comments: renewnote
+													},
+													success: function(data) {
+														var obj = $.parseJSON(data);
+														if (!obj.SUCCESS) {
+															alert(obj.ERROR);
+														}
+														LoadSubscriptions(cid);
+													}
+												});
+
+											/*
+												var i;
+												for (i = 0; i < obj.RENEWALS.length; ++i) {
+												    console.log("SID"+i+"="+obj.RENEWALS[i].SUBSCRIPTIONID+"CID"+i+"="+obj.RENEWALS[i].CLUBID);
+
+													$.ajax({
+														type: "POST",
+														url: "Subscriptions/Cart/AddItem.cfm?"+Math.random(),
+														data: {
+															SubscriptionID: obj.RENEWALS[i].SUBSCRIPTIONID,
+															RetireSubscriptionIDs: obj.RENEWALS[i].SUBSCRIPTIONID,
+															Description: obj.RENEWALS[i].DESCRIPTION,
+															ClubID: obj.RENEWALS[i].CLUBID,
+															PlanID: obj.RENEWALS[i].PLANID,
+															BasePrice: obj.RENEWALS[i].BASEPRICE,
+															SetupPrice: obj.RENEWALS[i].SETUPPRICE,
+															Base_Price: obj.RENEWALS[i].BASE_PRICE,
+															Notes: renewnote,
+															fRenewal: obj.RENEWALS[i].FRENEWAL
+														},
+														success: function(data) {
+															var obj = $.parseJSON(data);
+															if (!obj.SUCCESS)
+																alert(obj.ERROR);
+															//else
+																LoadSubscriptions(cid);
+														}
+													});
+												}
+												//LoadSubscriptions(cid);
+											*/
+
+											}
+										}
+									}
+								});
+							}
+							else {
+								// This is the function that will add the single renewal to the cart
+								CartDetailDialog(cid, 0, 'Renew Subscription', '', '', 0, '', 0, '', sid);
+							}
+						}
+						else {
+							if (flocked) alert("Your subscription account has been locked, please contact support.");
+							else if (freadonly) alert("Your current security level is not authorized to purchase Modules.");
+						}
+						return false;
+					});
+
+					$('.UpgradeSub').on('click', function() {
+						var sid  		= this.id;
+						var freadonly  	= $("#fReadOnly").val();
+						var flocked  	= $("#fLocked").val();
+						if (freadonly == "FALSE" && flocked == "FALSE") {
+							var cid  	= $("#ClubID").val();
+							// Check to see if a single renewal or if needs to be renewed with other subscriptions tied to a master subscription
+							$.ajax({
+								type: "POST",
+								url: "Subscriptions/Cart/CheckRenewals.cfm?"+Math.random(),
+								data: {
+									SubscriptionID: sid,
+									ClubID: cid
+								},
+								success: function(data) {
+									var renewals = $.parseJSON(data);
+									console.log('Renewals='+renewals);
+									if (!renewals)
+										// This is the function that will add the single trial to the cart
+										CartDetailDialog(cid, 0, 'Purchase Trial', '', '', 0, '', 0, '', sid);
+									else {
+										// This will add multiple trials to the cart, and bundled appropriately
+										var promocode = window.prompt('All trial subscriptions will be purchased together, and if applicable, be bundled to ensure the best rate possible. If you do not wish to purchase one or more trials click on the cart item to cancel them individually before puchasing.  If you have a PromoCode, please enter it below.', '');
+										if (promocode == null)
+											return false;
+										else {
+											// Add the multiple renewals
+											$.ajax({
+												type: "POST",
+												url: "Subscriptions/Cart/AddRenewalItems.cfm?"+Math.random(),
+												data: {
+													SubscriptionID: sid,
+													ClubID: cid,
+													PromoCode: promocode
+												},
+												success: function(data) {
+													var obj = $.parseJSON(data);
+													if (!obj.SUCCESS) {
+														alert(obj.ERROR);
+													}
+													LoadSubscriptions(cid);
+												}
+											});
+										}
+									}
+								}
+							});
+						}
+						else {
+							if (flocked) alert("Your subscription account has been locked, please contact support.");
+							else if (freadonly) alert("Your current security level is not authorized to purchase Modules.");
+						}
+						return false;
+					});
+
+	/*
+					$('.UpgradeSub').on('click', function() {
+						var sid  		= this.id;
+						var freadonly  	= $("#fReadOnly").val();
+						var flocked  	= $("#fLocked").val();
+						if (freadonly == "FALSE" && flocked == "FALSE") {
+							var cid  	= $("#ClubID").val();
+							// This is the function that will add to the cart
+							CartDetailDialog(cid, 0, 'Purchase Trial Subscription', '', '', 0, '', 0, '', sid);
+						}
+						else {
+							if (flocked) alert("Your subscription account has been locked, please contact support.");
+							else if (freadonly) alert("Your current security level is not authorized to purchase Modules.");
+						}
+						// This is the temp method for subscribing immediately
+						return false;
+					});
+	*/
+					$('.SubDetail').on('click', function() {
+						var sid  		= this.id;
+						var freadonly  	= $("#fReadOnly").val();
+						//console.log("readonly="+freadonly);
+						if (freadonly == "FALSE") {
+							SubscriptionDetailDialog(sid);
+						}
+						return false;
+					});
+
+					$('.SiteView').on('click', function() {
+						var site  		= this.id;
+						window.open(site+'/index.php');
+						return false;
+					});
+
+					$('.PaySub').on('click', function() {
+						var payallids = $('.PayAll').attr("id");
+						//alert("payallids="+payallids);
+						if (payallids.length != 0 && payallids.indexOf(",") >= 0) {
+							//if (window.confirm("Would you like to pay ALL outstanding subscriptions? (Click 'Cancel' to pay only the original order of the selected item)")) {
+							window.alert("This allows you to view and pay the original order of the selected item only. To view or pay the complete invoice for all outstanding items, click 'View/Pay Current Invoice' above.");
+								//$('.PayAll').click();
+								//return false;
+							//}
+						}
+						// Do we need to add locked check?  Probably not, we want them to pay!
+						var sid  		= this.id;
+						var freadonly  	= $("#fReadOnly").val();
+						//console.log("readonly="+freadonly);
+						if (freadonly == "FALSE") {
+							//var cid  	= $("#ClubID").val();
+							//var pname 	= $("#"+pid+"_Add").text();
+							//console.log("PlanID="+pid+" PName="+pname);
+							//var etype   = $("#EntityType").val();
+							SubscriptionPaymentDialog(sid);
+						}
+						else {
+							alert("Your current security level is not authorized to make payments.");
+						}
+						return false;
+					});
+
+					$('.ViewInvoice').on('click', function() {
+						// Do we need to add locked check?  Probably not, we want them to pay!
+						var freadonly  	= $("#fReadOnly").val();
+						//console.log("readonly="+freadonly);
+						if (freadonly == "FALSE") {
+							var InvSubIDs = $('.PayAll').attr('id');
+							//alert('InvSubIDs='+InvSubIDs);
+							// Open invoice
+							var w = 975;
+							var h = screen.height-250;
+							LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+							TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+							var attr = 'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars=Yes,status=No,resizable,toolbar=No,menubar=No';
+							var theLocation = 'Subscriptions/PrintInvoice.cfm?PrintFormat=HTM&InvoiceSubIDs='+InvSubIDs;
+							winpops = window.open(theLocation, "_blank", attr);
+							winpops.focus();
+						}
+						else {
+							alert("Your current security level is not authorized to make payments.");
+						}
+						return false;
+					});
+
+					$('.PayAll').on('click', function() {
+						// Do we need to add locked check?  Probably not, we want them to pay!
+						var invsubids  		= this.id;
+						var freadonly  	= $("#fReadOnly").val();
+						//console.log("readonly="+freadonly);
+						if (freadonly == "FALSE") {
+							//SubscriptionPaymentDialog(sid);
+							//console.log("Payment invsubids="+invsubids);
+							// Email the invoice here using the subscription ids in the cart
+							// and popup the Payment screen and/or the invoice
+							var w = 975;
+							var h = screen.height-250;
+							LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+							TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+							var attr = 'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars=Yes,status=No,resizable,toolbar=No,menubar=No';
+							var theLocation = 'Subscriptions/Payment.cfm?PmtType=CC&InvoiceSubIDs='+invsubids;
+							winpops = window.open(theLocation, "_blank", attr);
+							winpops.focus();
+							//return false;
+						}
+						else {
+							alert("Your current security level is not authorized to make payments.");
+						}
+						return false;
+					});
+
+					$('.RemoveSub').on('click', function() {
+						var cid  	= $("#ClubID").val();
+						var pid  	= this.id;
+						//console.log("club="+cid+" Plan="+pid);
+						if (pid == '')
+							pid = 0;
+						//return false;
+						if (!window.confirm("Please confirm - This will remove the selected plan from the cart.")) {
+							//alert("Not removed!");
+							return false;
+						}
+						$.ajax({
+							type: "POST",
+							url: "Subscriptions/Cart/RemoveItem.cfm?"+Math.random(),
+							data: {
+								PlanID: pid,
+								ClubID: cid
+							},
+							success: function(data) {
+								var obj = $.parseJSON(data);
+								if (!obj.SUCCESS)
+									alert(obj.ERROR);
+								else
+									LoadSubscriptions(cid);
+							}
+						});
+						return false;
+					});
+
+					$('.RemoveAll').on('click', function() {
+						if (!window.confirm("Please confirm - This will remove all items from the cart.")) {
+							//alert("Not removed!");
+							return false;
+						}
+						$.ajax({
+							type: "POST",
+							url: "Subscriptions/Cart/RemoveItem.cfm?"+Math.random(),
+							data: {
+								fAll: 'True'
+							},
+							success: function(data) {
+								var obj = $.parseJSON(data);
+								if (!obj.SUCCESS)
+									alert(obj.ERROR);
+								else
+									LoadSubscriptions(cid);
+							}
+						});
+						return false;
+					});
+
+
+					$('#SubscribeCart').on('click', function() {
+						//Double check that the club has not been locked
+						var cid  	= $("#ClubID").val();
+						var flocked	= $("#fLocked").val();
+						//console.log("*****LOCKED="+flocked);
+						if (flocked == 'FALSE') {
+							if (!window.confirm("Please confirm - This will subscribe to all items in the cart.")) {
+								//alert("Not removed!");
+								return false;
+							}
+						    var $this = $(this);
+					        $this.text('Please wait...');
+							$.ajax({
+								type: "POST",
+								url: "Subscriptions/Cart/SubscribeCart.cfm?"+Math.random(),
+								data: {
+									ClubID: cid
+								},
+								success: function(data) {
+									var obj = $.parseJSON(data);
+									var AmtDue = 0;
+									if (!obj.SUCCESS)
+										alert(obj.MSG+" "+obj.ERROR);
+									else {
+										//alert(obj.MSG);
+										//var parsed = $('<div/>').append(obj.MSG);
+										//var txtmsg = parsed.text();
+
+
+										Swal.fire({
+											title: '<strong>Congratulations!</strong>',
+											icon: 'success',
+											html:
+												obj.MSG,
+												confirmButtonColor: '#3085d6',
+												confirmButtonText: 'OK'
+										}).then((result) => {
+											if (result.isConfirmed) {
+
+												// If a trial or free the length will be 0...do not invoice
+												if (obj.INVOICESUBIDS.length != 0) {
+													// Save the Invoices to be grouped (and Email?) the invoice here using the subscription ids in the cart
+													// Must be done before opening payments or each subscription will be billed individually
+													$.ajax({
+														type: "POST",
+														url: "Subscriptions/Invoice/ConcludePurchase.cfm?"+Math.random(),
+														data: {
+															InvoiceSubIDs: obj.INVOICESUBIDS
+														},
+														success: function(data) {
+															var obj2 = $.parseJSON(data);
+															if (!obj2.SUCCESS) {
+																alert(obj2.ERROR);
+															}
+															else {
+																AmtDue = obj2.AMTDUE;
+															}
+															//console.log('ConcludedPurchase: '+obj2.INVOICESUBIDS);
+														}
+													}).done ( function( data ) {
+														// Email the invoice here using the subscription ids in the cart
+														// and popup the Payment screen and/or the invoice
+														if (AmtDue > 0) {
+															var w = 975;
+															var h = screen.height-250;
+															LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+															TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+															var attr = 'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars=Yes,status=No,resizable,toolbar=No,menubar=No';
+															var theLocation = 'Subscriptions/Payment.cfm?InvoiceSubIDs='+obj.INVOICESUBIDS;
+															winpops = window.open(theLocation, "_blank", attr);
+															winpops.focus();
+															//return false;
+														}
+													});
+												}
+
+											}
+										});
+
+
+
+										/*
+										swal({
+											title: 'Congratulations!',
+											text:  obj.MSG,
+											type: 'success'
+											},
+											function (inputValue) {
+
+												// If a trial or free the length will be 0...do not invoice
+												if (obj.INVOICESUBIDS.length != 0) {
+													// Save the Invoices to be grouped (and Email?) the invoice here using the subscription ids in the cart
+													// Must be done before opening payments or each subscription will be billed individually
+													$.ajax({
+														type: "POST",
+														url: "Subscriptions/Invoice/ConcludePurchase.cfm?"+Math.random(),
+														data: {
+															InvoiceSubIDs: obj.INVOICESUBIDS
+														},
+														success: function(data) {
+															var obj2 = $.parseJSON(data);
+															if (!obj2.SUCCESS) {
+																alert(obj2.ERROR);
+															}
+															else {
+																AmtDue = obj2.AMTDUE;
+															}
+															//console.log('ConcludedPurchase: '+obj2.INVOICESUBIDS);
+														}
+													}).done ( function( data ) {
+														// Email the invoice here using the subscription ids in the cart
+														// and popup the Payment screen and/or the invoice
+														if (AmtDue > 0) {
+															var w = 975;
+															var h = screen.height-250;
+															LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+															TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+															var attr = 'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars=Yes,status=No,resizable,toolbar=No,menubar=No';
+															var theLocation = 'Subscriptions/Payment.cfm?InvoiceSubIDs='+obj.INVOICESUBIDS;
+															winpops = window.open(theLocation, "_blank", attr);
+															winpops.focus();
+															//return false;
+														}
+													});
+												}
+
+										});
+										*/
+										//swal('Congratulations!', obj.MSG, 'success')
+										//.then((value) => {
+//
+										//});
+
+										//return false;		
+
+
+									}
+									LoadSubscriptions(cid);
+									// If the main iframe was used to subscribe, reload the page
+									var ps = localStorage.getItem("PageStatus");
+									if (ps == "Subscribe") {
+										// This just decided to stop working for Ptext refresh, replaced with below as work around but need to investigate
+										//document.getElementById("imain").contentWindow.location.reload();
+										$('#imain').attr('src', $('#imain').attr('src'));
+									}
+							        $this.text('Subscribe');
+								}
+							});
+						}
+						else alert("Your subscription account has been locked, please contact support.");
+
+					});
+
+					// If all items in the cart have been purchased or removed, change the cart icon here from cart to checkmark
+					if ($('#NoCartItems').length) {
+						//$("#notifyCnt").css("display", "none");
+						//$("#notifyCnt").text("");
+						setTimeout(function() {
+							$("#cartmsg").css("display", "none");
+							//$("#cartwrap").slideUp();
+						}, 2000);
+					}
+
+					// Set the last viewed cart
+					//alert('cart type='+cid);
+					if (cid == 0) {
+						$("#cartload").css("background-color", "floralwhite");
+						localStorage.setItem("SubType", "Account");
+					}
+					else {
+						localStorage.setItem("SubType", "Club");
+						$("#cartload").css("background-color", "ghostwhite");
+					}
+
+					// Refresh subscription cart flag
+					RefreshFlag();
+				});
+			}
+
+
+			function ReloadNotifications () {
+				//console.log("OPENING NotificationDialog");
+			    LoadNotifications();
+			}
+
+			function OpenNotifications () {
+				$("#notificationwrap").toggle("fast");
+				LoadNotifications();
+			}
+
+			function PollNotifications (isView) {
+
+				// If the user is being impersonated load notifications but never mark them as read
+				if ($('#NotOrigUser').length && isView != "False") {
+					return false;
+				}
+				// If new messages found, set notification flag visible with new message number count
+				// If the notifycnt element is hidden but the alert bell is visible, the current message count has been viewed
+				//console.log("Polling Type="+isView);
+				$.ajax({
+					type: "POST",
+					url: "Notifications/PollNotifications.cfm?"+Math.random(),
+					data: {
+						Read: isView
+					},
+				  	success: function(data) {
+						var obj = $.parseJSON(data);
+						if (obj.SUCCESS) {
+							//console.log(obj.MSGCNT);
+							if(obj.MSGCNT > 0) {
+								// Display the notification bell and number of notifications
+								$("#notifymsg").css("display", "initial");
+								$("#notifyCnt").css("display", "initial");
+								$("#notifyCnt").text(obj.MSGCNT);
+
+								// Reload the notifications, remove new count and poll them as read only if the dropdown is OPEN
+								var isVisible = $("#notificationwrap").is(":visible");
+								if (isVisible) {
+									LoadNotifications();
+									// Removed to always show notification count whether read or not
+									//setTimeout(function() {
+									//	$("#notifyCnt").text('0');
+									//	$("#notifyCnt").css("display", "none");
+									//	PollNotifications("True");
+									//}, 1700);
+								}
+							}
+							else{
+								// If the poll was looking for new notification and found none, clear the bell count
+								if (isView == "False") {
+									$("#notifyCnt").css("display", "none");
+									$("#notifyCnt").text("");
+									// If all of the notifications were logically deleted, hide the notification bell
+									if ($('#NoNotifications').length) {
+										setTimeout(function() {
+											$("#notifymsg").css("display", "none");
+											$("#notificationwrap").fadeOut("fast");
+										}, 1800);
+									}
+								}
+							}
+							// If there is a popup notification and the user is not being impersonated, display it
+							if (obj.SYSMESSAGE != "" && !$('#NotOrigUser').length){
+								//if ($( "#notifymsg" ).is( ":hidden" )) {
+								//	$("#notifymsg").css("display", "initial");
+								//}
+								$("#popupk").text(obj.ID);
+								$("#userMessage").html(obj.SYSMESSAGE).text();
+								$("#popupk").click();
+							}
+						}
+						else {
+							//console.log("Unable to retrieve notifications..."+obj.SYSMESSAGE);
+							$("#notifymsg").css("display", "none");
+							$("#notifyCnt").css("display", "none");
+							$("#notifyCnt").text("");
+						}
+					}
+				});
+			}
+
+			// Get the user's top configured icons for the shortcuts menus
+			function LoadShortcuts() {
+				//console.log('Loading Shortcuts');
+				$.ajax({
+					type: "GET",
+					url: "Shortcuts_Search.cfm?"+Math.random(),
+					cache: false,
+					//data: $("#form").serialize(),
+					success: function(data) {
+						$("#DataContent").html(data);
+						$("#DataContent2").html(data);
+					}
+				});
+			}
+
+			// Values that can be passed (	cid=clubid, prdid=productid, prodname=productname,
+			//								source=interfacesource ('subscribe' if not coming from the cart'),
+			//								vcode=versioncode (for products with different versions),
+			//								pid=planid,
+			//								scode=subscriptioncode (to identify products tied to specific accounts),
+			//								prodacctid=productaccountid (the id of the product table being subscribed to)
+			//								wbtemp=website template if selected
+			//								subid=subscriptionid for renewals and upgrades
+			function CartDetailDialog (cid, prdid, prodname, source, vcode, pid, scode, prodacctid, wbtemp, subid) {
+				//console.log("PlanId="+pid);
+				$.ajax ({
+					type: "POST",
+					url: "Subscriptions/Dialog/CartDetailDialog.cfm?r="+Math.random(),
+					data: {
+							PlanID: pid,
+							ProductID: prdid,
+							ClubID: cid,
+							VersionCode: vcode,
+							SubscriptionCode: scode,
+							ProductAccountID: prodacctid,
+							WebsiteTemplate: wbtemp,
+							SubscriptionID: subid
+						}
+					}).done ( function( data ) {
+						//console.log("Ajax call done");
+						//var title = etype+' Subscription to '+pname;
+						var title = 'Subscription: '+prodname;
+						$("#CartDetailDiv").html (data);
+
+						$("#CartDetailForm").validate({			//Setup validation rules
+						});
+
+						$( ".Date" ).datepicker({
+							showOn: 'both',
+							buttonImage : 'images/tcal/cal.gif',
+							buttonText : 'Click Calendar',
+							changeMonth: true,
+							changeYear: true,
+							numberOfMonths: 1
+						});
+
+						$("#WebsiteTemplate").change(function(e) {
+							var name = $(this).find("option:selected").val();
+						    var pathid = $('.EBTemplate').attr('id');
+						    $('.EBTemplate').attr('src', pathid+name+'-screenshot.png');
+						});
+
+						//$("#DomainManagement").change(function() {
+						//	var selectedVal = $(this).find(':selected').val();
+						//	if (selectedVal == 'No' || selectedVal == 'Undecided') {
+						//		$('#DomainName').val('tbd.com');
+						//	}
+						//	else {
+						//		$('#DomainName').val('');
+						//	}
+						//});
+
+						$("#CartDetailDiv").dialog ({		// Open the Dialog
+							modal: true,
+							minWidth: 650,
+							Width: 	650,
+							minHeight: 450,
+							Height:	450,
+							title:	title,
+							show: {effect: 'fade', speed: 2000},
+							create: function(event, ui) {
+						          $("#CartDetailDiv").parent('.ui-dialog').css('zIndex', 4999)
+						              .nextAll('.ui-widget-overlay').css('zIndex', 4999);
+						    },
+							buttons: [
+										{ text: "Cancel", click: function() { $(this).dialog("close"); } },
+										{ text: "Add to Cart", click: function() {
+												if ( $("#CartDetailForm").valid() ) {
+													$.post("Subscriptions/Cart/AddItem.cfm?"+Math.random(),
+														$("#CartDetailForm").serialize(), function(data) {
+															var obj = $.parseJSON(data);
+															if (!obj.SUCCESS)
+																alert(obj.ERROR);
+															else {
+																LoadSubscriptions(cid);
+																// If the source of the item was the main iframe page set auto refresh on subscribe
+																if (source == "Subscribe")
+																	localStorage.setItem("PageStatus", "Subscribe");
+															}
+														});
+													$(this).dialog("close");
+												} // Field is highlighted...message not needed
+												//else {
+												//	alert("Validation failed!  One or more required fields were not entered.");
+												//}
+										}}
+									]
+						});  // .dialog
+
+						//if (pid == 0)  // If we are adding -- hide the delete button
+						//	$(".ui-dialog-buttonpane button:contains('Delete')").hide();
+
+					});	 // .ajax
+			}	// OpenDiaog
+
+			function SubscriptionDetailDialog (sid) {
+				//console.log("SubId="+sid);
+				$.ajax ({
+					type: "POST",
+					url: "Subscriptions/Dialog/SubscriptionDetailDialog.cfm?r="+Math.random(),
+					data: {
+							SubscriptionID: sid
+						}
+					}).done ( function( data ) {
+						//console.log("Ajax call done");
+						var title = 'Subscription Detail';
+						$("#SubDetailDiv").html (data);
+
+						$("#Invoice").on("click", function() {
+							//alert("Invoice integration coming soon.");
+						    var InvSubIDs = $('#InvoiceSubIDs').val();
+							var w = 975;
+							var h = screen.height-250;
+							LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+							TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+							var attr = 'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars=Yes,status=No,resizable,toolbar=No,menubar=No';
+							var theLocation = 'Subscriptions/PrintInvoice.cfm?PrintFormat=HTM&InvoiceSubIDs='+InvSubIDs+'&SubscriptionID='+sid;
+							winpops = window.open(theLocation, "_blank", attr);
+							winpops.focus();
+							//return false;
+						});
+
+						$("#Downgrade").on("click", function() {
+							if (!window.confirm("Please confirm that you would like to request a cancellation of this subscription.")) {
+								alert("Cancellation Request NOT sent!");
+								return false;
+							}
+							$.ajax({
+								type: "POST",
+								url: "Subscriptions/Action/SubscriptionDowngrade.cfm?"+Math.random(),
+								data: {
+									SubscriptionID: sid
+								},
+								success: function(data) {
+									var obj = $.parseJSON(data);
+									if (obj.SUCCESS) {
+										alert("Cancellation request sent! You can expect to hear from our team within the next two business days.");
+										LoadSubscriptions($("#ClubID").val());
+									}
+									else {
+										alert(obj.ERROR);
+									}
+								}
+							});
+						});
+
+						$("#SubDetailDiv").dialog ({		// Open the Dialog
+							modal: true,
+							minWidth: 620,
+							Width: 	620,
+							title:	title,
+							show: {effect: 'fade', speed: 2000},
+							create: function(event, ui) {
+						          $("#SubDetailDiv").parent('.ui-dialog').css('zIndex', 4999)
+						              .nextAll('.ui-widget-overlay').css('zIndex', 4999);
+						    },
+							buttons: [
+										{ text: "Close", click: function() { $(this).dialog("close"); } }
+									/*	,{ text: "Add to Cart", click: function() {
+												//if ( $("#SubDetailForm").valid() ) {
+													$.post("Subscriptions/Action/EditSubscriptionDetail.cfm?"+Math.random(),
+														$("#SubDetailForm").serialize(), function(data) {
+															var obj = $.parseJSON(data);
+															if (!obj.SUCCESS)
+																alert(obj.ERROR);
+															else {
+																LoadSubscriptions(cid);
+																// If the source of the item was the main iframe page set auto refresh on subscribe
+																if (source == "Subscribe")
+																	localStorage.setItem("PageStatus", "Subscribe");
+															}
+														});
+													$(this).dialog("close");
+												//	}
+												//else {
+												//	alert("Validation failed!  One or more required fields were not entered.");
+												//}
+										}}
+										*/
+									]
+						});  // .dialog
+
+						//if (pid == 0)  // If we are adding -- hide the delete button
+						//	$(".ui-dialog-buttonpane button:contains('Delete')").hide();
+
+					});	 // .ajax
+			}	// OpenDialog
+
+			function SubscriptionPaymentDialog (sid) {
+				//console.log("SubId="+sid);
+				//alert("Our billing dept has been notified of your purchase and you will receive an emailed invoice soon");
+
+				//console.log("Payment SID="+sid);
+				// Email the invoice here using the subscription ids in the cart
+				// and popup the Payment screen and/or the invoice
+				var w = 975;
+				var h = screen.height-250;
+				LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+				TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+				var attr = 'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars=Yes,status=No,resizable,toolbar=No,menubar=No';
+				var theLocation = 'Subscriptions/Payment.cfm?PmtType=CC&SubscriptionID='+sid;
+				winpops = window.open(theLocation, "_blank", attr);
+				winpops.focus();
+				//return false;
+
+
+			 /*	$.ajax ({
+					type: "POST",
+					url: "Subscriptions/Dialog/SubscriptionPaymentDialog.cfm?r="+Math.random(),
+					data: {
+							SubscriptionID: sid
+						}
+					}).done ( function( data ) {
+						console.log("Ajax call done");
+						var title = 'Subscription Detail';
+						$("#SubPaymentDiv").html (data);
+
+						$("#Invoice").on("click", function() {
+							alert("Invoice integration comming soon.");
+						});
+
+						$("#SubPaymentDiv").dialog ({		// Open the Dialog
+							modal: true,
+							minWidth: 620,
+							Width: 	620,
+							title:	title,
+							show: {effect: 'fade', speed: 2000},
+							create: function(event, ui) {
+						          $("#SubPaymentDiv").parent('.ui-dialog').css('zIndex', 4999)
+						              .nextAll('.ui-widget-overlay').css('zIndex', 4999);
+						    },
+							buttons: [
+										{ text: "Close", click: function() { $(this).dialog("close"); } },
+										{ text: "Pay Now", click: function() {
+												//if ( $("#SubPaymentForm").valid() ) {
+													$.post("Subscriptions/Action/SubscriptionPayment.cfm?"+Math.random(),
+														$("#SubPaymentForm").serialize(), function(data) {
+															var obj = $.parseJSON(data);
+															if (!obj.SUCCESS)
+																alert(obj.ERROR);
+															else {
+																//LoadSubscriptions(cid);
+																// If the source of the item was the main iframe page set auto refresh on subscribe
+																//if (source == "Subscribe")
+																//	localStorage.setItem("PageStatus", "Subscribe");
+															}
+														});
+													$(this).dialog("close");
+												//	}
+												//else {
+												//	alert("Validation failed!  One or more required fields were not entered.");
+												//}
+										}}
+
+									]
+						});  // .dialog
+					});	 // .ajax
+			 */
+			}	// OpenDialog
+
+			function closeSubscriptions() {
+				$("#cartwrap").slideUp("fast");
+			}
+
+
+			// Open and reload the Subscription Center/Cart
+			function LoadSubscriptions(cid) {
+				//$( "#cartmsg" ).click();
+				// Hide any dropdowns dropdown
+				$("#usermenu").fadeOut("fast");
+	           	$("#notificationwrap").fadeOut("fast");
+
+				// Load the cart items
+				var isHidden = $( "#cartwrap" ).is( ":hidden" );
+				if (isHidden) {
+					if (cid == 0)
+						localStorage.setItem("SubType", "Account");
+					else
+						localStorage.setItem("SubType", "Club");
+				}
+				else {
+					// Open the dropdown cart
+					// If there are no cart items hide the cart icon
+					if ($('#CartItems').length) {
+						$("#cartmsg").css("display", "none");
+						return false;
+					}
+				}
+				$("#cartwrap").slideDown("fast");
+				LoadCart(cid);
+			}
+
+			//Reset Subscription cart icon and flag
+			function RefreshFlag() {
+				// Reset Cart Flag after each load.
+				$.ajax({
+				  	type: "GET",
+				  	url: "Subscriptions/Cart/SetFlag.cfm?r="+Math.random(),
+					success: function(data) {
+						var obj = $.parseJSON(data);
+						if (!obj.SUCCESS)
+						console.log('Problem setting flag: '+obj.ERROR);
+						else {
+							//Set the default cart view based on permissions if not already set
+							var st = localStorage.getItem("SubType");
+							if (st.length == 0) {
+								if (obj.DISTRICTACCESS) {
+									//console.log("Default district cart page");
+						    		localStorage.setItem("SubType", "District");
+						    	}
+								else {
+									//console.log("Default club cart page");
+						    		localStorage.setItem("SubType", "Club");
+						    	}
+							}
+							//console.log("Show Cart="+obj.DISPLAYCART);
+							//console.log("Show Flag="+obj.DISPLAYFLAG);
+							//console.log("Success="+obj.SUCCESS);
+							//console.log("DistrictAccess="+obj.DISTRICTACCESS);
+							//console.log("Error="+obj.ERROR);
+							if (obj.DISPLAYCART) {
+								$("#cartmsg").css("display", "block");
+								$("#cartimg").removeClass('fa-cart-arrow-down');
+								$("#cartimg").removeClass('fa-cart-plus');
+								$("#cartmsg").removeClass('DistrictAccessCart');
+								$("#cartmsg").removeClass('ClubAccessCart');
+								if (obj.DISTRICTACCESS) {
+									$("#cartmsg").addClass('DistrictAccessCart');
+								}
+								else {
+									$("#cartmsg").addClass('ClubAccessCart');
+								}
+								if (obj.DISPLAYFLAG) {
+									//console.log("Show Flag=Y");
+									$("#cartimg").addClass('fa-cart-arrow-down');
+									$("#cartflag").css("display", "inline");
+								}
+								else {
+									//console.log("Show Flag=N");
+									$("#cartimg").addClass('fa-cart-plus');
+									$("#cartflag").css("display", "none");
+								}
+							}
+							else {
+								$("#cartmsg").css("display", "none");
+								$("#cartflag").css("display", "none");
+								$("#cartwrap").slideUp("fast");
+							}
+						}
+					}
+				});
+			}
+	  	</script>
+
+	<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a180e09f5f0c758a',t:'MTc4MzUzMjQ2MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; visibility: hidden;" src="./saved_resource(1).html"></iframe><script defer="" src="./v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;19fc18d8211d46468feddbbead422407&quot;,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+ 
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true" style="visibility: visible !important;"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;limited&quot;,&quot;isActive&quot;:false,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

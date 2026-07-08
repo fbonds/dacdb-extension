@@ -1,0 +1,132 @@
+.sidebar-menu {
+	list-style: none;
+ 	margin: 0;
+	padding: 0;
+	background-color: #f8f8ff;
+}
+.sidebar-menu > li {
+	position: relative;
+	margin: 0;
+	padding: 0; 
+	font-size: 14px;
+}
+.sidebar-menu > li > a {
+	padding: 3px 3px 3px 3px;
+	display: block;
+	/* letter-spacing: .10em; */
+	border-left: 3px solid transparent;
+	color: #2a66a1; 	/* #b8c7ce */
+}		
+.sidebar-menu > i .fa, .far, .fas, .fal {
+	width: 20px; 
+}
+
+.sidebar-menu > li:hover > a, .sidebar-menu > li.active > a {
+	color: #fff;
+	background: #2a66a1;		/*  #1e282c */
+	border-left-color: #8D0E3A;	/* ff7600 */
+	border-width: 15px 
+}
+.sidebar-menu > li > .treeview-menu {
+	margin: 0 0px;
+	background: #8D0E3A; 			/* ff7600 */
+}
+.sidebar-menu > li .label,
+.sidebar-menu > li .badge {
+	margin-top: 3px;
+	margin-right: 5px; 
+}
+.sidebar-menu li.header {
+	padding: 10px 5px 10px 10px;
+	font-size: 14px;
+	color: #ffffff;
+	letter-spacing: .05em;		/*.10em */
+	background: #2a66a1; 
+}
+.sidebar-menu li.subheader {
+	padding: 5px 5px 5px 10px;
+	font-size: 14px;
+	color: #ffffff;
+	letter-spacing: .05em;		/* .10em */
+	background: #8dafd3; 
+}
+.sidebar-menu li.section {
+	padding: 4px 3px 3px 20px;
+	font-size: 15px;
+	color: blue;
+	letter-spacing: .15em;
+	background: lightblue; 
+}
+.sidebar-menu li > a > .fa-angle-left {
+	width: auto;
+	height: auto;
+	padding: 0;
+	margin-right: 10px;
+	margin-top: 3px; 
+}
+.sidebar-menu li.active > a > .fa-angle-left {
+	transform: rotate(-90deg); 
+}
+ .sidebar-menu li.active > .treeview-menu {
+	display: block; 
+	}
+.sidebar-menu a {
+	color: #ffffff;
+	text-decoration: none; 
+}
+.sidebar-menu .treeview-menu {
+	display: none;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	padding-left: 20px; 
+}
+.sidebar-menu .treeview-menu .treeview-menu {
+	padding-left: 20px; 
+}
+.sidebar-menu .treeview-menu > li {
+	margin: 0; 
+}
+.sidebar-menu .treeview-menu > li > a {
+	padding: 3px 5px 3px 15px;
+	background: #2a66a1;		
+	display: block;
+	font-size: 13px;
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #ffffff;
+}
+.sidebar-menu .treeview-menu > li > a > .fa {
+	width: 20px; 
+}
+.sidebar-menu .treeview-menu > li > a > .fa-angle-left,
+.sidebar-menu .treeview-menu > li > a > .fa-angle-down {
+	width: auto; 
+}
+.sidebar-menu .treeview-menu > li.active > a, .sidebar-menu .treeview-menu > li > a:hover {
+	color: #fff; 
+}
+
+/* ===  Custom Add Ons === */
+.label-primary {
+	background-color: #337ab7;
+	padding: .2em .3em .3em;
+	color: #fff;
+	border-radius: .25em;
+}
+.label-info {
+	background-color: #5bc0de;
+	color: #fff;
+	border-radius: .25em;
+	letter-spacing: .08em;
+}
+.label-warning {
+	background-color: #f0ad4e;
+	color: #fff;
+	border-radius: .25em;
+}
+.label-danger {
+	background-color: #d9534f;
+	color: #fff;
+	border-radius: .25em;
+}
+ .sidebarcolumn { position: fixed; top: 0; overflow: auto}

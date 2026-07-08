@@ -1,0 +1,92 @@
+/* header CSS 12/8/12 icon */
+body {
+	font: 10px normal Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	min-width:1024px;
+	background-color:#ffffff;
+}
+img {border:0px;}
+.Welcome {font-family:Tahoma, Geneva, sans-serif; color: #2a66a1; font-size: 12px; font-weight: bold;}
+.container {width: 100%; margin: 0 auto; margin-top:0px;}
+		ul#topnav {
+			margin: 0; padding: 0;
+			float: left;
+			width: 100%;
+			list-style: none;
+			position: relative;
+			font-size: 1.2em;
+			background:url(images/topnav_s.gif) repeat-x;
+		}
+		
+		ul#topnav li {
+			float: left;
+			margin: 0; 
+			padding: 0;
+			margin-top:0px;
+			border-right: 1px solid gainsboro;
+			border-top: 1px solid gainsboro;
+			border-left: 1px solid gainsboro;
+			border-radius:3px 3px 0px 0px;
+			background-color:ghostwhite;
+			margin-right:2px;
+		}
+		
+		ul#topnav li a {
+			padding: 6px;	display: block;	text-decoration: none;
+		}
+		
+		ul#topnav li:hover { background: #165899 url (images/topnav_a.gif) repeat-x; }
+		
+		ul#topnav li span {
+			float: left;
+			padding: 6px 0;
+			position: absolute;
+			left: 0;
+			width: 100%;
+			background: #165899;
+			background-image:url(../Images/glossynav.png);
+			background-repeat:repeat-x; 
+			background-position:center;
+			color: #fff;
+			-moz-border-radius-bottomright: 5px;
+			-khtml-border-radius-bottomright: 5px;
+			-webkit-border-bottom-right-radius: 5px;
+			-moz-border-radius-bottomleft: 5px;
+			-khtml-border-radius-bottomleft: 5px;
+			-webkit-border-bottom-left-radius: 5px;
+			min-height:16px;
+		}
+		
+		.headertext{ font-family:Tahoma, Geneva, sans-serif; font-size:12px; color:#666666;}
+		
+		ul#topnav li:hover span { display: block; }
+		ul#topnav li span a { display: inline; }
+		ul#topnav li span a:hover {text-decoration: underline;}
+		
+		a.ClickedLink:link { padding: 6px 6px;	display: block;	color: #ffffff;	text-decoration: none; }
+		a.ClickedLink:visited {padding: 6px 6px;	display: block;	color: #ffffff;	text-decoration: none; }
+		a.ClickedLink:active { padding: 6px 6px;	display: block;	color: #ffffff;	text-decoration: none; }
+		a.ClickedLink:hover { padding: 6px 6px;	display: block;	color: ghostwhite;	text-decoration: none; }
+		
+		a.DefaultLink:link { padding: 6px 6px;	display: block;	color: #165899;	text-decoration: none; }
+		a.DefaultLink:visited {padding: 6px 6px;	display: block;	color: #165899;	text-decoration: none; }
+		a.DefaultLink:active { padding: 6px 6px;	display: block;	color: #165899;	text-decoration: none; }
+		a.DefaultLink:hover { padding: 6px 6px;	display: block;	color: #666666;	text-decoration: none; }
+		
+		a.ChildLink:link { padding: 6px 6px;	display: block;	text-decoration: none; color:#ffffff;}
+		a.ChildLink:visited { padding: 6px 6px;	display: block;	text-decoration: none; color:#ffffff;}
+		a.ChildLink:active { padding: 6px 6px;	display: block;	text-decoration: none; color:#ffffff;}
+		a.ChildLink:hover { padding: 6px 6px;	display: block;	text-decoration: none; color:ghostwhite;}
+		
+		a.Menulink{ font-family:Tahoma, Geneva, sans-serif; font-size:12px}
+		
+		a.Menulink:link { color: #165899;	text-decoration: none; }
+		a.Menulink:visited {color: #165899;	text-decoration: none; }
+		a.Menulink:active { color: #165899;	text-decoration: none; }
+		a.Menulink:hover { color: #666666;	text-decoration: none; }
+		
+		a.Headerlink:link { color: #333333;	text-decoration: none; }
+		a.Headerlink:visited {color: #333333; text-decoration: none; }
+		a.Headerlink:active { color: #333333; text-decoration: none; }
+		a.Headerlink:hover { color: #333333; text-decoration: none; }
