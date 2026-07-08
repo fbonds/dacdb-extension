@@ -1,0 +1,13 @@
+{
+  "name": "dacdb-extension",
+  "version": "0.1.0",
+  "description": "Export any table to CSV for DACdb",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && cp src/manifest.json dist/ && cp src/styles.css dist/",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

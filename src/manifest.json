@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "DACdb CSV Export",
+  "version": "0.1.0",
+  "description": "Export any table on DACdb to CSV",
+  "permissions": [],
+  "host_permissions": ["https://*.dacdb.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.dacdb.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "all_frames": true
+    }
+  ]
+}
